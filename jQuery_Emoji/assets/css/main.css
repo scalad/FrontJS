@@ -1,0 +1,517 @@
+*{margin: 0; padding: 0}
+
+html{
+    height: 100%;
+}
+body{
+    position: relative;
+    height: 100%;
+    min-width: 1200px;
+    font-size: 14px;
+    font-family: 'microsoft yahei';
+}
+
+input,textarea,select{
+    border-width: 2px;
+    border-radius: 3px;
+    border-color: #ffde45;
+    border-style: dashed;
+    font-size: 16px;
+}
+input{
+    height: 30px;
+}
+textarea{
+    vertical-align: text-top;
+}
+li{
+    list-style: none;
+}
+
+.btn{
+    padding: 0 20px;
+    border-radius: 5px;
+    display: inline-block;
+    background-color: #ffde45;
+    font-size: 18px;
+    text-align: center;
+    cursor: pointer;
+    user-select:none;
+    -ms-user-select:none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+.btn:hover{
+    background-color: #ffbb00;
+}
+.moudle{
+    box-sizing: content-box;
+    border-radius: 5px;
+    border: 1px #c8c8c8 solid;
+}
+.title{
+    width: 100%;
+    height: 50px;
+    background-color: #ffde45;
+    color: #000000;
+    font-size: 18px;
+    text-align: center;
+    line-height: 50px;
+}
+.table{
+}
+.table:after {
+    display: table;
+    content: '';
+    clear: both;
+}
+.lable{
+    float: left;
+    width: 80px;
+}
+.cell{
+    display: table-cell;
+    width: 300px;
+}
+
+
+.loading{
+    width: 150px;
+    margin: 0 auto;
+}
+.loading p{
+    font-size: 20px;
+    text-align: center;
+}
+#container{
+    padding: 10px;
+    height: 100%;
+    box-sizing: border-box;
+}
+/*#container:after{
+    /!*去浮动*!/
+    content:"";
+    display: block;
+    height: 0;
+    overflow: hidden;
+    clear: both;
+}*/
+.left{
+    width: 300px;
+    height: 100%;
+    float: left;
+    overflow: auto;
+}
+.left .words,.doodle{
+    background-color: #ededed;
+}
+
+.words-content, .doodle-content{
+    margin: 10px;
+    color: #000000;
+    font-size: 16px;
+    line-height: 50px;
+}
+#font-size{
+    width: 100px;
+}
+#addfont-btn, #begindoodle-btn{
+    width: 80%;
+    height: 50px;
+    margin: 0 auto;
+}
+.left .doodle{
+    margin-top: 10px;
+}
+#bursh-weight-select{
+    position: relative;
+    z-index: 99;
+    display: inline-block;
+    vertical-align: middle;
+}
+#bursh-weight-select ul{
+    display: none;
+    position: absolute;
+    width: 120px;
+    border: 1px solid #4798d9;
+    background-color: #ffffff;
+}
+#bursh-weight-select ul.show{
+    display: block;
+}
+#bursh-weight-selected{
+    width: 120px;
+    min-height: 23px;
+    padding: 5px 0;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    border-width: 2px;
+    border-radius: 3px;
+    border-color: #ffde45;
+    border-style: dashed;
+    position: relative;
+}
+#bursh-weight-selected span{
+    line-height: 1em;
+    font-size: 12px;
+    position: absolute;
+    right: 3px;
+    top: 50%;
+    margin-top: -6px;
+    cursor: default;
+}
+#bursh-weight-select ul li{
+    width: 120px;
+    padding: 5px 0;
+}
+#bursh-weight-select ul li:hover{
+    background-color: #4798d9;
+}
+#bursh-weight-select .bw{
+    width: 80px;
+    margin: 0 auto;
+    background-color: #000000;
+}
+#bursh-weight-select .bw1{height: 1px}
+#bursh-weight-select .bw5{height: 5px}
+#bursh-weight-select .bw10{height: 10px}
+#bursh-weight-select .bw20{height: 20px}
+#bursh-weight-select .bw40{height: 40px}
+#contact-info{
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #ededed;
+    line-height: 1.5em;
+    text-align: center;
+}
+
+.center{
+    height: 100%;
+    margin: 0 410px 0 310px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 60px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    position: relative;
+    background-color: #f7f7f7;
+}
+#btn-wrap, #doodle-btn-wrap{
+    position: absolute;
+    right: 10px;
+    visibility: hidden;
+}
+#doodle-btn-wrap.show, #btn-wrap.show{
+    visibility: visible;
+}
+
+#btn-wrap .btn, #doodle-btn-wrap .btn{
+    margin-left: 10px;
+    height: 40px;
+    line-height: 40px;
+}
+#addlocalimg{
+    position: absolute;
+    top: -99px;
+}
+#addlocalimg-btn{
+
+}
+#clear-btn{
+
+}
+#drawing-btn{
+
+}
+.center .panel{
+    width: 100%;
+    height: 100%;
+    margin-top: 50px;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;
+    box-sizing: border-box;
+    border:2px dashed #ffde45;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    background-color: #ffffff;
+
+}
+.panel .ui-resizable-se{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    position: absolute;
+    text-align: center;
+    line-height: 25px;
+    right: 0;
+    bottom: 0;
+    background: #4798d9 url("../img/icon/scale.png") no-repeat center;
+}
+.panel{
+    position: relative;
+    user-select:none;
+    -ms-user-select:none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+/*    background-image: linear-gradient(to bottom, transparent 19px, #eee 19px , #eee 20px, transparent 20px, transparent 39px, #eee 39px , #eee 40px, transparent 40px, transparent 59px, #ddd 59px , #ddd 60px),
+    linear-gradient(to right,  transparent 19px, #eee 19px , #eee 20px, transparent 20px, transparent 39px, #eee 39px , #eee 40px, transparent 40px, transparent 59px, #ddd 59px , #ddd 60px);
+    background-size: 60px 60px;*/
+}
+.panel #doodle-canvas{
+    display: none;
+    position: absolute;
+    z-index: 99;
+    cursor: crosshair;
+    box-sizing: border-box;
+}
+.panel #doodle-canvas.show{
+    display: block;
+}
+
+.right{
+    display: flex;
+    box-orient:vertical;
+    flex-direction:column;
+    width: 400px;
+    height: 100%;
+    float: right;
+    background-color: #ededed;
+}
+
+#tagswrap{
+    max-height: 31px;
+    position: relative;
+    overflow: hidden;
+    background-color: #4d4d4d;
+    padding: 3px 0;
+    font-size: 0;
+    transition: all 1s;
+}
+#tags:hover #tagswrap{
+    max-height: 200px;
+    overflow: auto;
+}
+.tag{
+    margin: 4px;
+    padding: 2px 10px;
+    font-size: 14px;
+    display: inline-block;
+    background-color: #efefef;
+    border-radius: 11px;
+    cursor: pointer;
+    user-select:none;
+    -ms-user-select:none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+#moretag{
+    width: 100%;
+    cursor: alias;
+    text-align: center;
+    color: #ffffff;
+    font-size: 12px;
+    background-color: #333333;
+}
+#img-list:after{
+    /*去浮动*/
+    content:"";
+    display: block;
+    height: 0;
+    overflow: hidden;
+    clear: both;
+}
+#img-list{
+    padding-top: 10px;
+    flex: 1;
+    zoom: 1;
+    overflow: auto;
+    box-sizing: border-box;
+}
+
+.img-container{
+    float: left;
+    width: 47%;
+    height: 150px;
+    margin-left: 2%;
+    margin-bottom: 6px;
+    position: relative;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+.img-container img{
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform:translate(-50%, -50%); 	/* IE 9 */
+    -moz-transform:translate(-50%, -50%); 	/* Firefox */
+    -webkit-transform:translate(-50%, -50%);   /* Safari 和 Chrome */
+    -o-transform:translate(-50%, -50%); /* Opera */
+    cursor: pointer;
+}
+
+/*遮罩层*/
+#msk, #mobile{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position : fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: none;
+}
+#msk.show{
+    display: block;
+}
+@media screen and (max-width: 1200px) {
+    #mobile{
+        display: block;
+        font-size: 50px;
+        color: #fff;
+        font-weight: bold;
+        text-align: center;
+        line-height: 10;
+    }
+}
+#msk .tips{
+    width: 400px;
+    height: 50px;
+    margin: 0 auto;
+    background-color: #333333;
+    color: #ffffff;
+    font-size: 36px;
+}
+#msk .tips p{
+    text-align: center;
+    margin: 0 auto;
+}
+#msk #close-btn-msk{
+    width: 40px;
+    height: 40px;
+    background-color: #ff563c;
+    right: 10px;
+    top: 10px;
+    font-size: 36px;
+    line-height: 40px;
+    cursor: pointer;
+}
+#picture{
+    background-color: #ffffff;
+    position : fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform:translate(-50%, -50%); 	/* IE 9 */
+    -moz-transform:translate(-50%, -50%); 	/* Firefox */
+    -webkit-transform:translate(-50%, -50%);   /* Safari 和 Chrome */
+    -o-transform:translate(-50%, -50%); /* Opera */
+}
+
+
+/*图片盒子样式*/
+.img-box {
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    font-size: 0;
+}
+
+.img-box img{
+    transition: transform 0.5s;
+}
+.img-box img.flip{
+    transform: rotateY(180deg);
+}
+
+.active-box{
+    border: 1px darkblue dashed;
+    cursor: move;
+}
+
+.active-box .box-btn,#close-btn-msk{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #49ff46;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    position: absolute;
+    text-align: center;
+    line-height: 25px;
+}
+
+.active-box .close-btn{
+    background-color: #ff563c;
+    left: -25px;
+    top: -25px;
+}
+.active-box .close-btn:hover{
+    background-color: #ff1a02;
+    cursor: pointer;
+}
+
+.active-box .rotate-btn{
+    background: #49ff46 url("../img/icon/rotatebtn.png") no-repeat center;
+    right: -25px;
+    top: -25px;
+}
+.active-box .rotate-btn:hover{
+    background-color: #00e609;
+    cursor: move;
+}
+.active-box .flip-btn{
+    background: #333333 url("../img/icon/flip.png") no-repeat center;
+    left: -25px;
+    bottom: -25px;
+}
+.active-box .flip-btn:hover{
+    background-color: #0e0e0e;
+    cursor: pointer;
+}
+/*jqueryUI 缩放把手*/
+.img-box .ui-resizable-se{
+    visibility: hidden;
+}
+.active-box .ui-resizable-se{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    position: absolute;
+    text-align: center;
+    line-height: 25px;
+    right: -25px;
+    bottom: -25px;
+    background: #4798d9 url("../img/icon/scale.png") no-repeat center;
+    visibility: visible;
+}
+.active-box .ui-resizable-se:hover{
+    background-color: #0054d9;
+    cursor: se-resize;
+}
+.ui-resizable-e{
+    width: 10px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: e-resize;
+}
+.ui-resizable-s{
+    width: 100%;
+    height: 10px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    cursor: s-resize;
+}

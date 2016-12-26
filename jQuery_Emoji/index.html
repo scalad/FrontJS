@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="baidu-site-verification" content="wVmLLH90un" />
+    <meta name="baidu-site-verification" content="AYYwOWRLEw" />
+    <title>表情工厂-在线制作表情金馆长暴走漫画表情包</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/icon/icon.ico" media="screen">
+    <link rel="stylesheet" href="assets/css/main.css" type="text/css">
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?b38cd188ed34de5ad19c4f13f7c05e2f";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body>
+<div class="wrap" id="container">
+    <div class="left">
+        <div class="words moudle">
+            <div class="words-title title">
+                <span>文字</span>
+            </div>
+            <div class="words-content">
+                <div class="table">
+                    <lable class="lable"><span>内容：</span></lable>
+                    <div class="cell">
+                        <textarea rows="5"  id="font-content"></textarea>
+                    </div>
+                </div>
+                <div class="table">
+                    <lable class="lable"><span>大小：</span></lable>
+                    <div class="cell">
+                        <input type="number" id="font-size" min="0" max="999" placeholder="像素值"/>
+                    </div>
+                </div>
+                <div class="table">
+                    <lable class="lable"><span>字体：</span></lable>
+                    <div class="cell">
+                        <select name="fontfamily" id="font-family">
+                            <option value="microsoft yahei">微软雅黑</option>
+                            <option value="songti">宋体</option>
+                            <option value="黑体">黑体</option>
+                            <option value="楷体">楷体</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="table">
+                    <lable class="lable"><span>颜色：</span></lable>
+                    <div class="cell">
+                        <input type="color" id="font-color"/>
+                    </div>
+
+                </div>
+
+                <div class="btn" id="addfont-btn">添加文字</div>
+            </div>
+        </div>
+        <div class="doodle moudle">
+            <div class="doodle-title title">
+                <span>涂鸦</span>
+            </div>
+            <div class="doodle-content">
+                <div class="table">
+                    <lable class="lable"><span>画笔粗细：</span></lable>
+                    <div class="cell">
+                        <ul id="bursh-weight-select">
+                            <li>
+                                <div  id="bursh-weight-selected">
+                                    <div class="bw bw1" data-w='1'></div><span>▼</span>
+                                </div>
+                                <ul id="bursh-weight-option">
+                                    <li><div class="bw bw1" data-w='1'></div></li>
+                                    <li><div class="bw bw5" data-w='5'></div></li>
+                                    <li><div class="bw bw10" data-w='10'></div></li>
+                                    <li><div class="bw bw20" data-w='20'></div></li>
+                                    <li><div class="bw bw40" data-w='40'></div></li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="table">
+                    <lable class="lable"><span>画笔颜色：</span></lable>
+                    <div class="cell">
+                        <input type="color" id="brush-color"/>
+                    </div>
+                </div>
+
+                <div class="btn" id="begindoodle-btn">开始涂鸦</div>
+            </div>
+        </div>
+        <div class="moudle" id="contact-info">
+            <p>所有素材收集整理于网络</p>
+            <p>如有侵权联系删除</p>
+            <p>邮箱:<a href="mailto:2216588399@qq.com">2216588399@qq.com</a> </p>
+        </div>
+    </div>
+    <div class="right moudle">
+        <div class="right-title title">
+            <span>图片素材</span>
+        </div>
+        <div id="tags">
+            <div id="tagswrap">
+                <span class="tag">热门</span>
+                <span class="tag">人物轮廓</span>
+                <span class="tag">面部</span>
+                <span class="tag">场景</span>
+                <span class="tag">小道具</span>
+                <span class="tag">对话框</span>
+                <span class="tag">边框</span>
+                <span class="tag">证件</span>
+                <span class="tag">金馆长</span>
+                <span class="tag">尔康</span>
+                <span class="tag">王尼玛</span>
+            </div>
+            <div id="moretag">≡</div>
+        </div>
+        <div id="img-list">
+            <div class="loading"><img src="assets/img/icon/loading.gif" alt=""/><p>加载中...</p></div>
+        </div>
+    </div>
+    <div class="center moudle">
+        <div id="btn-wrap" class="show">
+            <label for="addlocalimg" id="addlocalimg-btn" class="btn">添加本地图片</label>
+            <input type="file" accept="*/*" id="addlocalimg"/>
+            <div class="btn" id="clear-btn">清空</div>
+            <div class="btn" id="drawing-btn">生成图片</div>
+        </div>
+        <div id="doodle-btn-wrap">
+            <div class="btn" id="undone-btn">撤销</div>
+            <div class="btn" id="over-btn">画完了</div>
+        </div>
+        <div class="panel">
+            <canvas id="doodle-canvas" width="500" height="500">
+                你的浏览器不支持canvas！建议使用chrome、火狐等浏览器！
+            </canvas>
+        </div>
+    </div>
+</div>
+<div id="msk">
+    <div class="tips">
+        <p>
+            右键复制图片去装X吧！
+        </p>
+    </div>
+    <div class="box-btn close-btn" id="close-btn-msk">╳</div>
+    <canvas id="picture"></canvas>
+</div>
+<div id="mobile">
+    暂不支持移动端，请在电脑上访问！
+</div>
+<script data-main="assets/js/main" src="assets/plugins/require-2.1.11-min.js"></script>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":["mshare","qzone","weixin","tsina","tieba","sqq","copy"],"bdPic":"","bdStyle":"1","bdSize":"24"},"slide":{"type":"slide","bdImg":"0","bdPos":"right","bdTop":"350"},"image":{"viewList":["tieba","sqq","tsina","qzone","weixin"],"viewText":"分享到：","viewSize":"24"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>
+
