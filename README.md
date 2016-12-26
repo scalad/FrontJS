@@ -14,3 +14,5 @@ Some rannalhi javascript website effect collections, some javascript、angularjs
 [jQuery_DataTable](https://silence940109.github.io/FrontJS/jQuery_DataTable/)
 
 [notification](https://silence940109.github.io/FrontJS/notification/)
+
+[js_2048](https://silence940109.github.io/FrontJS/js_2048/)
