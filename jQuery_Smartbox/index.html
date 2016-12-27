@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<!-- saved from url=(0044)http://smartbox.huangsw.com/cn/examples.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+
+    <meta name="description" content="jquery弹出层插件">
+    <meta name="robots" content="jquery弹出层插件，黄书伟">
+    <meta property="og:type" content="jquery弹框插件">
+    <meta property="og:title" content="jquery dialog">
+    <meta property="og:url" content="http://smartbox.huangsw.com/cn/examples.html">
+    <meta property="og:site_name" content="smartbox">
+    <meta property="og:description" content="弹出层插件实例">
+    <meta name="twitter:card" content="popup弹出层插件实例">
+    <meta name="twitter:title" content="弹出层插件实例">
+    <meta name="twitter:description" content="弹出层插件实例">
+
+
+    <title>smartbox</title>
+    <link href="./libs_examples.min.css" rel="stylesheet">
+
+
+    <!--<link href="../src/css/main.css" rel="stylesheet" />
+    <link href="../src/css/examples.css" rel="stylesheet" />
+    <link href="../public/css/smartbox/jquery.smartbox.css" rel="stylesheet" />
+    <link href="../public/css/prettify/prettify.css" rel="stylesheet" />-->
+</head>
+<body style="overflow-y: scroll;">
+<div class="mainContaner">
+    <div>
+    <!--content-->
+    <div class="section">
+        <h2>
+            <a id="anchor_beforeUse">使用说明</a>
+        </h2>
+        <p>
+            在使用这个插件之前你需要引用几个文件。<br><br>
+            1:jquery 1.5.1+<br>
+            2:jquery.smartbox.js<br>
+            3:jquery.smartbox.css<br><br>
+            满足条件后就可以使用啦...
+        </p>
+    </div>
+    <!--基本设置 start-->
+    <script src="./jquery.min.js" type="text/javascript"></script>
+    <div class="section">
+        <h2>
+            <a id="anchor_basic">基本设置</a>
+        </h2>
+        <p>
+            此插件基本的设置，默认弹出层内容来自配置项。
+        </p>
+        <ul class="tabs">
+            <li class="active"><a href="javascript:;" class="tab-output">基本设置</a></li>
+            <li><a href="javascript:;" class="tab-html">HTML</a></li>
+            <li><a href="javascript:;" class="tab-js">JavaScript</a></li>
+        </ul>
+        <div class="tabContainer">
+            <div class="operation">
+                <div id="basic" style="display: none; border-color: rgb(173, 171, 171); border-width: 1px; border-radius: 0px; width: 500px; height: 300px; z-index: 9999; top: 304.5px; left: 700.5px;" class="smartBox"><div class="smartBox_header smartBox_header_border" style="height: 50px; line-height: 50px; background-color: rgb(238, 238, 238);"><div class="smartBox_title">标题</div><a class="smartBox_header_close_normal"></a></div><div class="smartBox_body" style="height: 198px;"><p class="introduce_msg">smartbox.js 是一款基于jquery 的<span style="color: red;">开源的</span>弹出层插件，它小巧但功能强大，允许用户在一个界面同时弹出多个对话框。弹出的内容支持多种形式，样式简洁多样。想要了解更多可以查看<a target="_blank" href="http://smartbox.huangsw.com/cn/introduce.html">官方文档</a>。 查看源码以及demo可以访问<a href="https://github.com/huangshuwei/jquery.smartbox" target="_blank">我的github</a>。</p></div><div class="smartBox_footer" style="height: 50px; line-height: 50px; background-color: rgb(255, 255, 255);">底部</div></div>
+                <a id="basic_open" href="javascript:void(0);">点我看效果</a>
+            </div>
+            <pre class="prettyprint prettyprinted" style="display:none;"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"basic"</span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="atv">"</span><span class="pln">display</span><span class="pun">:</span><span class="pln"> none</span><span class="pun">;</span><span class="atv">"</span><span class="tag">&gt;&lt;/div&gt;</span><span class="pln">
+</span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"basic_open"</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"javascript:void(0);"</span><span class="tag">&gt;</span><span class="pln">点我看效果</span><span class="tag">&lt;/a&gt;</span><span class="pln">
+            </span></pre>
+        <pre class="prettyprint prettyprinted" style="display: none;"><span class="pln">$</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">(){</span><span class="pln">
+    $</span><span class="pun">(</span><span class="str">"#basic"</span><span class="pun">).</span><span class="pln">smartbox</span><span class="pun">({</span><span class="pln">
+        title</span><span class="pun">:</span><span class="str">'标题'</span><span class="pun">,</span><span class="pln">
+        footer</span><span class="pun">:</span><span class="str">'底部'</span><span class="pun">,</span><span class="pln">
+        width</span><span class="pun">:</span><span class="lit">500</span><span class="pun">,</span><span class="pln">
+        height</span><span class="pun">:</span><span class="lit">300</span><span class="pun">,</span><span class="pln">
+        content</span><span class="pun">:</span><span class="str">'&lt;p class="introduce_msg"&gt;smartbox.js 是一款基于jquery 的&lt;span style="color: red;"&gt;开源的&lt;/span&gt;弹出层插件，它小巧但功能强大，允许用户在一个界面同时弹出多个对话框。弹出的内容支持多种形式，样式简洁多样。想要了解更多可以查看&lt;a target="_blank" href="http://smartbox.huangsw.com/cn/introduce.html"&gt;官方文档&lt;/a&gt;。 查看源码以及demo可以访问&lt;a href="https://github.com/huangshuwei/jquery.smartbox" target="_blank"&gt;我的github&lt;/a&gt;。&lt;/p&gt;'</span><span class="pun">,</span><span class="pln">
+        isAutoShow</span><span class="pun">:</span><span class="kwd">false</span><span class="pln">
+    </span><span class="pun">});</span><span class="pln">
+
+    $</span><span class="pun">(</span><span class="str">"#basic_open"</span><span class="pun">).</span><span class="pln">click</span><span class="pun">(</span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        $</span><span class="pun">(</span><span class="str">"#basic"</span><span class="pun">).</span><span class="pln">smartbox</span><span class="pun">(</span><span class="str">"open"</span><span class="pun">);</span><span class="pln">
+    </span><span class="pun">});</span><span class="pln">
+</span><span class="pun">})</span></pre></div>
+<script type="text/javascript">
+$(function(){
+    $("#basic").smartbox({
+        title:'标题',
+        footer:'底部',
+        width:500,
+        height:300,
+        content:'<p class="introduce_msg">smartbox.js 是一款基于jquery 的<span style="color: red;">开源的</span>弹出层插件，它小巧但功能强大，允许用户在一个界面同时弹出多个对话框。弹出的内容支持多种形式，样式简洁多样。想要了解更多可以查看<a target="_blank" href="http://smartbox.huangsw.com/cn/introduce.html">官方文档</a>。 查看源码以及demo可以访问<a href="https://github.com/huangshuwei/jquery.smartbox" target="_blank">我的github</a>。</p>',
+        isAutoShow:false
+    });
+
+    $("#basic_open").click(function () {
+        $("#basic").smartbox("open");
+    });
+})
+</script>
+    </div>
+    <!--基本设置 End-->
+    <!--内容来自html标签 Start-->
+    <div class="section">
+        <h2>
+            <a id="anchor_contentByHtmlElement">内容来自html标签</a>
+        </h2>
+        <p>
+            此插件弹出层的内容，也可以来自html标签。title、content、footer 内容都可以通过html获取。
+        </p>
+        <ul class="tabs">
+            <li class="active"><a href="javascript:;" class="tab-output">内容来自html标签</a></li>
+            <li><a href="javascript:;" class="tab-html">HTML</a></li>
+            <li><a href="javascript:;" class="tab-js">JavaScript</a></li>
+        </ul>
+        <div class="tabContainer">
+            <div class="operation">
+                <div id="contentByHtmlElement" style="display: none; border-color: rgb(173, 171, 171); border-width: 1px; border-radius: 0px; width: 500px; height: 300px; z-index: 9999; top: 304.5px; left: 700.5px;" class="smartBox"><div class="smartBox_header smartBox_header_border" style="height: 50px; line-height: 50px; background-color: rgb(238, 238, 238);"><div class="smartBox_title">
+                        标题
+                    </div><a class="smartBox_header_close_normal"></a></div><div class="smartBox_body" style="height: 198px;">
+                        <p>smartbox.js 是一款基于jquery 的<span style="color: red;">开源的</span>弹出层插件，它小巧但功能强大，允许用户在一个界面同时弹出多个对话框。
+                            弹出的内容支持多种形式，样式简洁多样。想要了解更多可以查看<a target="_blank" href="http://smartbox.huangsw.com/cn/introduce.html">官方文档</a>。查看源码以及demo可以访问<a href="https://github.com/huangshuwei/jquery.smartbox" target="_blank">我的github</a>。
+                        </p>
+                    </div><div class="smartBox_footer" style="height: 50px; line-height: 50px; background-color: rgb(255, 255, 255);">
+                        footer 内容
+                    </div></div>
+                <a id="contentByHtmlElement_open" href="javascript:void(0);">点我看效果</a>
+            </div>
+ <pre class="prettyprint prettyprinted" style="display:none;"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"contentByHtmlElement"</span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="atv">"</span><span class="pln">display</span><span class="pun">:</span><span class="pln">none</span><span class="pun">;</span><span class="atv">"</span><span class="tag">&gt;</span><span class="pln">
+            </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"smartBox_header"</span><span class="tag">&gt;</span><span class="pln">
+                标题
+            </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+            </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"smartBox_body"</span><span class="tag">&gt;</span><span class="pln">
+                </span><span class="tag">&lt;p&gt;</span><span class="pln">smartbox.js 是一款基于jquery 的</span><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="atv">"</span><span class="pln">color</span><span class="pun">:</span><span class="pln"> red</span><span class="pun">;</span><span class="atv">"</span><span class="tag">&gt;</span><span class="pln">开源的</span><span class="tag">&lt;/span&gt;</span><span class="pln">弹出层插件，它小巧但功能强大，允许用户在一个界面同时弹出多个对话框。
+                    弹出的内容支持多种形式，样式简洁多样。想要了解更多可以查看</span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">target</span><span class="pun">=</span><span class="atv">"_blank"</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"http://smartbox.huangsw.com/cn/introduce.html"</span><span class="tag">&gt;</span><span class="pln">官方文档</span><span class="tag">&lt;/a&gt;</span><span class="pln">。查看源码以及demo可以访问</span><span class="tag">&lt;a</span><span class="pln">                          </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"https://github.com/huangshuwei/jquery.smartbox"</span><span class="pln"> </span><span class="atn">target</span><span class="pun">=</span><span class="atv">"_blank"</span><span class="tag">&gt;</span><span class="pln">我的github</span><span class="tag">&lt;/a&gt;</span><span class="pln">。
+                </span><span class="tag">&lt;/p&gt;</span><span class="pln">
+            </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+            </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"smartBox_footer"</span><span class="tag">&gt;</span><span class="pln">
+                footer 内容
+            </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+        </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+</span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"contentByHtmlElement_open"</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"javascript:void(0);"</span><span class="tag">&gt;</span><span class="pln">点我看效果</span><span class="tag">&lt;/a&gt;</span></pre>
+        <pre class="prettyprint prettyprinted" style="display: none;"><span class="pln">$</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">(){</span><span class="pln">
+        $</span><span class="pun">(</span><span class="str">"#contentByHtmlElement"</span><span class="pun">).</span><span class="pln">smartbox</span><span class="pun">({</span><span class="pln">
+            type</span><span class="pun">:</span><span class="pln"> </span><span class="str">'inline'</span><span class="pun">,</span><span class="com">// 'inline':title、content、footer 内容来自html标签；'option':title、content、footer 内容来自配置 |type string</span><span class="pln">
+            width</span><span class="pun">:</span><span class="pln"> </span><span class="lit">500</span><span class="pun">,</span><span class="pln">
+            height</span><span class="pun">:</span><span class="pln"> </span><span class="lit">300</span><span class="pun">,</span><span class="pln">
+            isAutoShow</span><span class="pun">:</span><span class="kwd">false</span><span class="pln">
+        </span><span class="pun">});</span><span class="pln">
+
+        $</span><span class="pun">(</span><span class="str">"#contentByHtmlElement_open"</span><span class="pun">).</span><span class="pln">click</span><span class="pun">(</span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+            $</span><span class="pun">(</span><span class="str">"#contentByHtmlElement"</span><span class="pun">).</span><span class="pln">smartbox</span><span class="pun">(</span><span class="str">"open"</span><span class="pun">);</span><span class="pln">
+        </span><span class="pun">});</span><span class="pln">
+    </span><span class="pun">})</span></pre></div>
+<script type="text/javascript">
+    $(function(){
+        $("#contentByHtmlElement").smartbox({
+            type: 'inline',// 'inline':title、content、footer 内容来自html标签；'option':title、content、footer 内容来自配置 |type string
+            width: 500,
+            height: 300,
+            isAutoShow:false
+        });
+
+        $("#contentByHtmlElement_open").click(function () {
+            $("#contentByHtmlElement").smartbox("open");
+        });
+    })
+</script>
+    </div>
+    <!--内容来自标签 End-->
+    <!--异步请求html Start-->
+    <div class="section">
+        <h2>
+            <a id="anchor_ajaxRequestHtml">异步请求html</a>
+        </h2>
+        <p>
+            此插件支持异步获取html内容。<br>
+        </p>
+        <ul class="tabs">
+            <li class="active"><a href="javascript:;" class="tab-output">异步请求html</a></li>
+            <li><a href="javascript:;" class="tab-html">HTML</a></li>
+            <li><a href="javascript:;" class="tab-js">JavaScript</a></li>
+        </ul>
+        <div class="tabContainer">
+            <div class="operation">
+                <div id="ajaxRequestHtml" style="display: none; border-color: rgb(173, 171, 171); border-width: 1px; border-radius: 0px; width: 500px; height: 330px; z-index: 9999; top: 289.5px; left: 700.5px;" class="smartBox"><div class="smartBox_header smartBox_header_border" style="height: 50px; line-height: 50px; background-color: rgb(238, 238, 238);"><div class="smartBox_title">smartbox 简介-通过ajax</div><a class="smartBox_header_close_normal"></a></div><div class="smartBox_body" style="height: 279px;"></div></div>
+                <a id="ajaxRequestHtml_close" href="javascript:void(0);">点我看效果</a>
+            </div>
+            <pre class="prettyprint prettyprinted" style="display:none;"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"ajaxRequestHtml"</span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="atv">"</span><span class="pln">display</span><span class="pun">:</span><span class="pln"> none</span><span class="pun">;</span><span class="atv">"</span><span class="tag">&gt;&lt;/div&gt;</span><span class="pln">
+</span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"ajaxRequestHtml_close"</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"javascript:void(0);"</span><span class="tag">&gt;</span><span class="pln">点我看效果</span><span class="tag">&lt;/a&gt;</span></pre>
+        <pre class="prettyprint prettyprinted" style="display: none;"><span class="pln">$</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">(){</span><span class="pln">
+        $</span><span class="pun">(</span><span class="str">"#ajaxRequestHtml"</span><span class="pun">).</span><span class="pln">smartbox</span><span class="pun">({</span><span class="pln">
+            type</span><span class="pun">:</span><span class="str">'option'</span><span class="pun">,</span><span class="com">// 'html':title、content、footer 内容来自html；'option':title、content、footer 内容来自配置 |type string</span><span class="pln">
+            ajaxSetting</span><span class="pun">:{</span><span class="pln">
+                contentType</span><span class="pun">:</span><span class="str">'html'</span><span class="pun">,</span><span class="pln"> </span><span class="com">// 'html':异步加载html；'img':异步加载图片；'iframe':异步加载iframe（可以解决跨域问题） |type:string</span><span class="pln">
+                url </span><span class="pun">:</span><span class="pln"> </span><span class="str">'../demo/html/introduce.html'</span><span class="pun">,</span><span class="pln">
+                isShowLoading </span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">,</span><span class="com">// 是否显示加载效果 |type:bool</span><span class="pln">
+                loadingType</span><span class="pun">:</span><span class="str">'text'</span><span class="pun">,</span><span class="com">// 'img':加载中以图片的效果展示；'text':加载中以文字的形式展示 |type:string</span><span class="pln">
+                loadingText</span><span class="pun">:</span><span class="str">'&lt;span style="color: #6f6f6f;"&gt;页面加载中...&lt;/span&gt;'</span><span class="pun">,</span><span class="pln">
+                errorContent</span><span class="pun">:</span><span class="str">'&lt;span style="color:red;"&gt;请关闭弹窗重新再试！&lt;/span&gt;'</span><span class="pln"> </span><span class="com">// 请求错误时显示的内容 |type:html</span><span class="pln">
+            </span><span class="pun">},</span><span class="pln">
+            title</span><span class="pun">:</span><span class="str">'smartbox 简介-通过ajax'</span><span class="pun">,</span><span class="pln">
+            width</span><span class="pun">:</span><span class="lit">500</span><span class="pun">,</span><span class="pln">
+            height</span><span class="pun">:</span><span class="lit">330</span><span class="pun">,</span><span class="pln">
+            isAutoShow</span><span class="pun">:</span><span class="kwd">false</span><span class="pun">,</span><span class="pln">
+            isShowFooter</span><span class="pun">:</span><span class="kwd">false</span><span class="pln">
+        </span><span class="pun">});</span><span class="pln">
+
+        $</span><span class="pun">(</span><span class="str">"#ajaxRequestHtml_close"</span><span class="pun">).</span><span class="pln">click</span><span class="pun">(</span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+            $</span><span class="pun">(</span><span class="str">"#ajaxRequestHtml"</span><span class="pun">).</span><span class="pln">smartbox</span><span class="pun">(</span><span class="str">'open'</span><span class="pun">);</span><span class="pln">
+        </span><span class="pun">});</span><span class="pln">
+    </span><span class="pun">})</span></pre></div>
+<script type="text/javascript">
+    $(function(){
+        $("#ajaxRequestHtml").smartbox({
+            type:'option',// 'html':title、content、footer 内容来自html；'option':title、content、footer 内容来自配置 |type string
+            ajaxSetting:{
+                contentType:'html', // 'html':异步加载html；'img':异步加载图片；'iframe':异步加载iframe（可以解决跨域问题） |type:string
+                url : '../demo/html/introduce.html',
+                isShowLoading : true,// 是否显示加载效果 |type:bool
+                loadingType:'text',// 'img':加载中以图片的效果展示；'text':加载中以文字的形式展示 |type:string
+                loadingText:'<span style="color: #6f6f6f;">页面加载中...</span>',
+                errorContent:'<span style="color:red;">请关闭弹窗重新再试！</span>' // 请求错误时显示的内容 |type:html
+            },
+            title:'smartbox 简介-通过ajax',
+            width:500,
+            height:330,
+            isAutoShow:false,
+            isShowFooter:false
+        });
+
+        $("#ajaxRequestHtml_close").click(function () {
+            $("#ajaxRequestHtml").smartbox('open');
+        });
+    })
+</script>
+    </div>
+    <!--异步请求html End-->
+    <!--异步请求image Start-->
+    <div class="section">
+        <h2>
+            <a id="anchor_asyncRequestImage">异步请求image</a>
+        </h2>
+        <p>
+            此插件支持异步获取图片。
+        </p>
+        <ul class="tabs">
+            <li class="active"><a href="javascript:;" class="tab-output">异步请求image</a></li>
+            <li><a href="javascript:;" class="tab-html">HTML</a></li>
+            <li><a href="javascript:;" class="tab-js">JavaScript</a></li>
+        </ul>
+        <div class="tabContainer">
+            <div class="operation">
+                <div id="asyncRequestImage" style="display: none; border-color: rgb(173, 171, 171); border-width: 1px; border-radius: 0px; width: 495px; height: 610px; z-index: 9999; top: 149.5px; left: 703px;" class="smartBox"><div class="smartBox_header"><a class="smartBox_header_close_circle"></a></div><div class="smartBox_body" style="height: 610px;"></div></div>
+                <a id="asyncRequestImage_close" href="javascript:void(0);">点我看效果</a>
+            </div>
+            <pre class="prettyprint prettyprinted" style="display:none;"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"asyncRequestImage"</span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="atv">"</span><span class="pln">display</span><span class="pun">:</span><span class="pln"> none</span><span class="pun">;</span><span class="atv">"</span><span class="tag">&gt;&lt;/div&gt;</span><span class="pln">
+</span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"asyncRequestImage_close"</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"javascript:void(0);"</span><span class="tag">&gt;</span><span class="pln">点我看效果</span><span class="tag">&lt;/a&gt;</span></pre>
+        <pre class="prettyprint prettyprinted" style="display: none;"><span class="pln">$</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">(){</span><span class="pln">
+        $</span><span class="pun">(</span><span class="str">"#asyncRequestImage"</span><span class="pun">).</span><span class="pln">smartbox</span><span class="pun">({</span><span class="pln">
+            type</span><span class="pun">:</span><span class="str">'option'</span><span class="pun">,</span><span class="com">// 'html':title、content、footer 内容来自html；'option':title、content、footer 内容来自配置 |type string</span><span class="pln">
+            ajaxSetting</span><span class="pun">:{</span><span class="pln">
+                contentType</span><span class="pun">:</span><span class="str">'img'</span><span class="pun">,</span><span class="com">// 'html':异步加载html；'img':异步加载图片；'iframe':异步加载iframe（可以解决跨域问题） |type:string</span><span class="pln">
+                url </span><span class="pun">:</span><span class="pln"> </span><span class="str">'http://smartbox.huangsw.com/demo/imgs/Vincent_big.jpg'</span><span class="pun">,</span><span class="pln">
+                isShowLoading </span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">,</span><span class="com">// 是否显示加载效果 |type:bool</span><span class="pln">
+                loadingType</span><span class="pun">:</span><span class="str">'img'</span><span class="pun">,</span><span class="com">// 'img':加载中以图片的效果展示；'text':加载中以文字的形式展示 |type:string</span><span class="pln">
+                errorContent</span><span class="pun">:</span><span class="str">'&lt;span style="color:red;"&gt;请关闭弹窗重新再试！&lt;/span&gt;'</span><span class="pln">
+            </span><span class="pun">},</span><span class="pln">
+            title</span><span class="pun">:</span><span class="str">'异步获取图片'</span><span class="pun">,</span><span class="pln">
+            width</span><span class="pun">:</span><span class="lit">495</span><span class="pun">,</span><span class="pln">
+            height</span><span class="pun">:</span><span class="lit">610</span><span class="pun">,</span><span class="pln">
+            closeType</span><span class="pun">:</span><span class="str">'out'</span><span class="pun">,</span><span class="pln">
+            isAutoShow</span><span class="pun">:</span><span class="kwd">false</span><span class="pun">,</span><span class="pln">
+            isShowTitle</span><span class="pun">:</span><span class="kwd">false</span><span class="pun">,</span><span class="pln">
+            isShowFooter</span><span class="pun">:</span><span class="kwd">false</span><span class="pln">
+        </span><span class="pun">});</span><span class="pln">
+
+        $</span><span class="pun">(</span><span class="str">"#asyncRequestImage_close"</span><span class="pun">).</span><span class="pln">click</span><span class="pun">(</span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+            $</span><span class="pun">(</span><span class="str">"#asyncRequestImage"</span><span class="pun">).</span><span class="pln">smartbox</span><span class="pun">(</span><span class="str">'open'</span><span class="pun">);</span><span class="pln">
+        </span><span class="pun">});</span><span class="pln">
+    </span><span class="pun">})</span></pre></div>
+<script type="text/javascript">
+    $(function(){
+        $("#asyncRequestImage").smartbox({
+            type:'option',// 'html':title、content、footer 内容来自html；'option':title、content、footer 内容来自配置 |type string
+            ajaxSetting:{
+                contentType:'img',// 'html':异步加载html；'img':异步加载图片；'iframe':异步加载iframe（可以解决跨域问题） |type:string
+                url : 'http://smartbox.huangsw.com/demo/imgs/Vincent_big.jpg',
+                isShowLoading : true,// 是否显示加载效果 |type:bool
+                loadingType:'img',// 'img':加载中以图片的效果展示；'text':加载中以文字的形式展示 |type:string
+                errorContent:'<span style="color:red;">请关闭弹窗重新再试！</span>'
+            },
+            title:'异步获取图片',
+            width:495,
+            height:610,
+            closeType:'out',
+            isAutoShow:false,
+            isShowTitle:false,
+            isShowFooter:false
+        });
+
+        $("#asyncRequestImage_close").click(function () {
+            $("#asyncRequestImage").smartbox('open');
+        });
+    })
+</script>
+    </div>
+    <!--异步请求image End-->
+    <!--通过iframe 跨域异步请求 Start-->
+    <div class="section">
+        <h2>
+            <a id="anchor_asyncRequest_ByIframe">通过iframe 跨域异步请求</a>
+        </h2>
+        <p>
+            此插件支持通过iframe 跨域异步请求。
+        </p>
+        <ul class="tabs">
+            <li class="active"><a href="javascript:;" class="tab-output">通过iframe异步请求</a></li>
+            <li><a href="javascript:;" class="tab-html">HTML</a></li>
+            <li><a href="javascript:;" class="tab-js">JavaScript</a></li>
+        </ul>
+        <div class="tabContainer">
+            <div class="operation">
+                <div id="asyncRequest_ByIframe" style="display: none; border-color: rgb(173, 171, 171); border-width: 1px; border-radius: 0px; width: 500px; height: 330px; z-index: 9999; top: 289.5px; left: 700.5px;" class="smartBox"><div class="smartBox_header smartBox_header_border" style="height: 50px; line-height: 50px; background-color: rgb(238, 238, 238);"><div class="smartBox_title">smartbox 简介-<span>通过iframe</span></div><a class="smartBox_header_close_normal"></a></div><div class="smartBox_body" style="height: 279px;"></div></div>
+                <a id="asyncRequest_ByIframe_close" href="javascript:void(0);">点我看效果</a>
+            </div>
+            <pre class="prettyprint prettyprinted" style="display:none;"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"asyncRequest_ByIframe"</span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="atv">"</span><span class="pln">display</span><span class="pun">:</span><span class="pln"> none</span><span class="pun">;</span><span class="atv">"</span><span class="tag">&gt;&lt;/div&gt;</span><span class="pln">
+</span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"asyncRequest_ByIframe_close"</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"javascript:void(0);"</span><span class="tag">&gt;</span><span class="pln">点我看效果</span><span class="tag">&lt;/a&gt;</span></pre>
+        <pre class="prettyprint prettyprinted" style="display: none;"><span class="pln">$</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">(){</span><span class="pln">
+            $</span><span class="pun">(</span><span class="str">"#asyncRequest_ByIframe"</span><span class="pun">).</span><span class="pln">smartbox</span><span class="pun">({</span><span class="pln">
+                type</span><span class="pun">:</span><span class="str">'option'</span><span class="pun">,</span><span class="com">// 'html':title、content、footer 内容来自html；'option':title、content、footer 内容来自配置 |type string</span><span class="pln">
+                ajaxSetting</span><span class="pun">:{</span><span class="pln">
+                    contentType</span><span class="pun">:</span><span class="str">'iframe'</span><span class="pun">,</span><span class="pln"> </span><span class="com">// 'html':异步加载html；'img':异步加载图片；'iframe':异步加载iframe（可以解决跨域问题） |type:string</span><span class="pln">
+                    url </span><span class="pun">:</span><span class="pln"> </span><span class="str">'http://smartbox.huangsw.com/demo/html/introduce.html'</span><span class="pun">,</span><span class="pln">
+                    isShowLoading </span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">,</span><span class="com">// 是否显示加载效果 |type:bool</span><span class="pln">
+                    loadingType</span><span class="pun">:</span><span class="str">'text'</span><span class="pun">,</span><span class="com">// 'img':加载中以图片的效果展示；'text':加载中以文字的形式展示 |type:string</span><span class="pln">
+                    loadingText</span><span class="pun">:</span><span class="str">'&lt;span style="color: #6f6f6f;"&gt;页面加载中...&lt;/span&gt;'</span><span class="pun">,</span><span class="pln">
+                    errorContent</span><span class="pun">:</span><span class="str">'&lt;span style="color:red;"&gt;请关闭弹窗重新再试！&lt;/span&gt;'</span><span class="pln"> </span><span class="com">// 请求错误时显示的内容 |type:html</span><span class="pln">
+                </span><span class="pun">},</span><span class="pln">
+                title</span><span class="pun">:</span><span class="str">'smartbox 简介-&lt;span&gt;通过iframe&lt;/span&gt;'</span><span class="pun">,</span><span class="pln">
+                width</span><span class="pun">:</span><span class="lit">500</span><span class="pun">,</span><span class="pln">
+                height</span><span class="pun">:</span><span class="lit">330</span><span class="pun">,</span><span class="pln">
+                isAutoShow</span><span class="pun">:</span><span class="kwd">false</span><span class="pun">,</span><span class="pln">
+                isShowFooter</span><span class="pun">:</span><span class="kwd">false</span><span class="pln">
+            </span><span class="pun">});</span><span class="pln">
+
+            $</span><span class="pun">(</span><span class="str">"#asyncRequest_ByIframe_close"</span><span class="pun">).</span><span class="pln">click</span><span class="pun">(</span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+                $</span><span class="pun">(</span><span class="str">"#asyncRequest_ByIframe"</span><span class="pun">).</span><span class="pln">smartbox</span><span class="pun">(</span><span class="str">'open'</span><span class="pun">);</span><span class="pln">
+            </span><span class="pun">});</span><span class="pln">
+        </span><span class="pun">})</span></pre></div>
+    <script type="text/javascript">
+        $(function(){
+            $("#asyncRequest_ByIframe").smartbox({
+                type:'option',// 'html':title、content、footer 内容来自html；'option':title、content、footer 内容来自配置 |type string
+                ajaxSetting:{
+                    contentType:'iframe', // 'html':异步加载html；'img':异步加载图片；'iframe':异步加载iframe（可以解决跨域问题） |type:string
+                    url : 'http://smartbox.huangsw.com/demo/html/introduce.html',
+                    isShowLoading : true,// 是否显示加载效果 |type:bool
+                    loadingType:'text',// 'img':加载中以图片的效果展示；'text':加载中以文字的形式展示 |type:string
+                    loadingText:'<span style="color: #6f6f6f;">页面加载中...</span>',
+                    errorContent:'<span style="color:red;">请关闭弹窗重新再试！</span>' // 请求错误时显示的内容 |type:html
+                },
+                title:'smartbox 简介-<span>通过iframe</span>',
+                width:500,
+                height:330,
+                isAutoShow:false,
+                isShowFooter:false
+            });
+
+            $("#asyncRequest_ByIframe_close").click(function () {
+                $("#asyncRequest_ByIframe").smartbox('open');
+            });
+        })
+    </script>
+    </div>
+    <!--通过iframe 跨域异步请求 End-->
+    <!--拖动类型设置 Start-->
+    <div class="section">
+        <h2>
+            <a id="anchor_dragType">拖动类型设置</a>
+        </h2>
+        <p>
+            拖动的类型可以通过‘dragType’ 属性设置，'relpace':拖拽一个替代的弹窗；'self':拖拽自身。
+        </p>
+        <ul class="tabs">
+            <li class="active"><a href="javascript:;" class="tab-output">拖动类型设置</a></li>
+            <li><a href="javascript:;" class="tab-html">HTML</a></li>
+            <li><a href="javascript:;" class="tab-js">JavaScript</a></li>
+        </ul>
+        <div class="tabContainer">
+            <div class="operation">
+                <div id="dragType" style="display: none; border-color: rgb(173, 171, 171); border-width: 1px; border-radius: 0px; width: 500px; height: 300px; z-index: 9999; top: 304.5px; left: 700.5px;" class="smartBox"><div class="smartBox_header smartBox_header_border" style="height: 50px; line-height: 50px; background-color: rgb(238, 238, 238);"><div class="smartBox_title">拖动类型设置</div><a class="smartBox_header_close_normal"></a></div><div class="smartBox_body" style="height: 249px;"><p class="introduce_msg">smartbox.js 是一款基于jquery 的<span style="color: red;">开源的</span>弹出层插件，它小巧但功能强大，允许用户在一个界面同时弹出多个对话框。弹出的内容支持多种形式，样式简洁多样。想要了解更多可以查看<a target="_blank" href="http://smartbox.huangsw.com/cn/introduce.html">官方文档</a>。 查看源码以及demo可以访问<a href="https://github.com/huangshuwei/jquery.smartbox" target="_blank">我的github</a>。</p></div></div>
+                <a id="dragType_open" href="javascript:void(0);">点我看效果</a>
+            </div>
+            <pre class="prettyprint prettyprinted" style="display:none;"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"dragType"</span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="atv">"</span><span class="pln">display</span><span class="pun">:</span><span class="pln"> none</span><span class="pun">;</span><span class="atv">"</span><span class="tag">&gt;&lt;/div&gt;</span><span class="pln">
+</span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"dragType_open"</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"javascript:void(0);"</span><span class="tag">&gt;</span><span class="pln">点我看效果</span><span class="tag">&lt;/a&gt;</span></pre>
+        <pre class="prettyprint prettyprinted" style="display: none;"><span class="pln">$</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">(){</span><span class="pln">
+        $</span><span class="pun">(</span><span class="str">"#dragType"</span><span class="pun">).</span><span class="pln">smartbox</span><span class="pun">({</span><span class="pln">
+            title</span><span class="pun">:</span><span class="str">'拖动类型设置'</span><span class="pun">,</span><span class="pln">
+            isShowFooter</span><span class="pun">:</span><span class="kwd">false</span><span class="pun">,</span><span class="pln">
+            width</span><span class="pun">:</span><span class="lit">500</span><span class="pun">,</span><span class="pln">
+            height</span><span class="pun">:</span><span class="lit">300</span><span class="pun">,</span><span class="pln">
+            content</span><span class="pun">:</span><span class="str">'&lt;p class="introduce_msg"&gt;smartbox.js 是一款基于jquery 的&lt;span style="color: red;"&gt;开源的&lt;/span&gt;弹出层插件，它小巧但功能强大，允许用户在一个界面同时弹出多个对话框。弹出的内容支持多种形式，样式简洁多样。想要了解更多可以查看&lt;a target="_blank" href="http://smartbox.huangsw.com/cn/introduce.html"&gt;官方文档&lt;/a&gt;。 查看源码以及demo可以访问&lt;a href="https://github.com/huangshuwei/jquery.smartbox" target="_blank"&gt;我的github&lt;/a&gt;。&lt;/p&gt;'</span><span class="pun">,</span><span class="pln">
+            isAutoShow</span><span class="pun">:</span><span class="kwd">false</span><span class="pun">,</span><span class="pln">
+            isCloseOnOverlayClick</span><span class="pun">:</span><span class="kwd">false</span><span class="pun">,</span><span class="pln">
+            dragType</span><span class="pun">:</span><span class="str">'self'</span><span class="pln"> </span><span class="com">// 'relpace':拖拽一个替代的弹窗；'self':拖拽自身</span><span class="pln">
+        </span><span class="pun">});</span><span class="pln">
+
+        $</span><span class="pun">(</span><span class="str">"#dragType_open"</span><span class="pun">).</span><span class="pln">click</span><span class="pun">(</span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+            $</span><span class="pun">(</span><span class="str">"#dragType"</span><span class="pun">).</span><span class="pln">smartbox</span><span class="pun">(</span><span class="str">'open'</span><span class="pun">);</span><span class="pln">
+        </span><span class="pun">});</span><span class="pln">
+    </span><span class="pun">})</span></pre></div>
+<script type="text/javascript">
+    $(function(){
+        $("#dragType").smartbox({
+            title:'拖动类型设置',
+            isShowFooter:false,
+            width:500,
+            height:300,
+            content:'<p class="introduce_msg">smartbox.js 是一款基于jquery 的<span style="color: red;">开源的</span>弹出层插件，它小巧但功能强大，允许用户在一个界面同时弹出多个对话框。弹出的内容支持多种形式，样式简洁多样。想要了解更多可以查看<a target="_blank" href="http://smartbox.huangsw.com/cn/introduce.html">官方文档</a>。 查看源码以及demo可以访问<a href="https://github.com/huangshuwei/jquery.smartbox" target="_blank">我的github</a>。</p>',
+            isAutoShow:false,
+            isCloseOnOverlayClick:false,
+            dragType:'self' // 'relpace':拖拽一个替代的弹窗；'self':拖拽自身
+        });
+
+        $("#dragType_open").click(function () {
+            $("#dragType").smartbox('open');
+        });
+    })
+</script>
+    </div>
+    <!--拖动类型设置 End-->
+    <!--打开和关闭 Start-->
+    <div class="section">
+        <h2>
+            <a id="anchor_openAndClose">打开和关闭</a>
+        </h2>
+        <p>
+            此插件提供打开和关闭的操作，可以根据自己的业务场景对弹窗进行操作。
+        </p>
+        <ul class="tabs">
+            <li class="active"><a href="javascript:;" class="tab-output">打开和关闭</a></li>
+            <li><a href="javascript:;" class="tab-html">HTML</a></li>
+            <li><a href="javascript:;" class="tab-js">JavaScript</a></li>
+        </ul>
+        <div class="tabContainer">
+            <div class="operation">
+                <div id="openAndClose" style="display: none; border-color: rgb(173, 171, 171); border-width: 1px; border-radius: 0px; width: 500px; height: 300px; z-index: 9999; top: 304.5px; left: 700.5px;" class="smartBox"><div class="smartBox_header smartBox_header_border" style="height: 50px; line-height: 50px; background-color: rgb(238, 238, 238);"><div class="smartBox_title">打开和关闭操作</div></div><div class="smartBox_body" style="height: 198px;"><p class="introduce_msg">smartbox.js 是一款基于jquery 的<span style="color: red;">开源的</span>弹出层插件，它小巧但功能强大，允许用户在一个界面同时弹出多个对话框。弹出的内容支持多种形式，样式简洁多样。想要了解更多可以查看<a target="_blank" href="http://smartbox.huangsw.com/cn/introduce.html">官方文档</a>。 查看源码以及demo可以访问<a href="https://github.com/huangshuwei/jquery.smartbox" target="_blank">我的github</a>。</p></div><div class="smartBox_footer" style="height: 50px; line-height: 50px; background-color: rgb(255, 255, 255);"><a id="openAndClose_close" href="javascript:void(0);">close box</a></div></div>
+                <a id="openAndClose_open" href="javascript:void(0);">点我看效果</a>
+            </div>
+            <pre class="prettyprint prettyprinted" style="display:none;"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"openAndClose"</span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="atv">"</span><span class="pln">display</span><span class="pun">:</span><span class="pln"> none</span><span class="pun">;</span><span class="atv">"</span><span class="tag">&gt;&lt;/div&gt;</span><span class="pln">
+</span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"openAndClose_open"</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"javascript:void(0);"</span><span class="tag">&gt;</span><span class="pln">点我看效果</span><span class="tag">&lt;/a&gt;</span></pre>
+        <pre class="prettyprint prettyprinted" style="display: none;"><span class="pln">$</span><span class="pun">(</span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        $</span><span class="pun">(</span><span class="str">"#openAndClose"</span><span class="pun">).</span><span class="pln">smartbox</span><span class="pun">({</span><span class="pln">
+            title</span><span class="pun">:</span><span class="pln"> </span><span class="str">'打开和关闭操作'</span><span class="pun">,</span><span class="pln">
+            width</span><span class="pun">:</span><span class="pln"> </span><span class="lit">500</span><span class="pun">,</span><span class="pln">
+            height</span><span class="pun">:</span><span class="pln"> </span><span class="lit">300</span><span class="pun">,</span><span class="pln">
+            content</span><span class="pun">:</span><span class="str">'&lt;p class="introduce_msg"&gt;smartbox.js 是一款基于jquery 的&lt;span style="color: red;"&gt;开源的&lt;/span&gt;弹出层插件，它小巧但功能强大，允许用户在一个界面同时弹出多个对话框。弹出的内容支持多种形式，样式简洁多样。想要了解更多可以查看&lt;a target="_blank" href="http://smartbox.huangsw.com/cn/introduce.html"&gt;官方文档&lt;/a&gt;。 查看源码以及demo可以访问&lt;a href="https://github.com/huangshuwei/jquery.smartbox" target="_blank"&gt;我的github&lt;/a&gt;。&lt;/p&gt;'</span><span class="pun">,</span><span class="pln">
+            footer</span><span class="pun">:</span><span class="str">'&lt;a id="openAndClose_close" href="javascript:void(0);"&gt;close box&lt;/a&gt;'</span><span class="pun">,</span><span class="pln">
+            isAutoShow</span><span class="pun">:</span><span class="kwd">false</span><span class="pun">,</span><span class="pln">
+            isCloseOnOverlayClick</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">,</span><span class="pln"> </span><span class="com">// |type:bool</span><span class="pln">
+            overlayOpacity</span><span class="pun">:</span><span class="pln"> </span><span class="lit">0.3</span><span class="pun">,</span><span class="pln"> </span><span class="com">// 遮罩层的透明度 0.1~1  |type:float</span><span class="pln">
+            isShowClose</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">false</span><span class="pln"> </span><span class="com">// 是否显示关闭图标 |type:bool</span><span class="pln">
+        </span><span class="pun">});</span><span class="pln">
+
+        $</span><span class="pun">(</span><span class="str">"#openAndClose_open"</span><span class="pun">).</span><span class="pln">click</span><span class="pun">(</span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+            $</span><span class="pun">(</span><span class="str">"#openAndClose"</span><span class="pun">).</span><span class="pln">smartbox</span><span class="pun">(</span><span class="str">'open'</span><span class="pun">);</span><span class="pln">
+        </span><span class="pun">});</span><span class="pln">
+
+        $</span><span class="pun">(</span><span class="str">"#openAndClose_close"</span><span class="pun">).</span><span class="pln">click</span><span class="pun">(</span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+            $</span><span class="pun">(</span><span class="str">"#openAndClose"</span><span class="pun">).</span><span class="pln">smartbox</span><span class="pun">(</span><span class="str">'close'</span><span class="pun">);</span><span class="pln">
+        </span><span class="pun">});</span><span class="pln">
+    </span><span class="pun">})</span></pre></div>
+<script type="text/javascript">
+    $(function () {
+        $("#openAndClose").smartbox({
+            title: '打开和关闭操作',
+            width: 500,
+            height: 300,
+            content:'<p class="introduce_msg">smartbox.js 是一款基于jquery 的<span style="color: red;">开源的</span>弹出层插件，它小巧但功能强大，允许用户在一个界面同时弹出多个对话框。弹出的内容支持多种形式，样式简洁多样。想要了解更多可以查看<a target="_blank" href="http://smartbox.huangsw.com/cn/introduce.html">官方文档</a>。 查看源码以及demo可以访问<a href="https://github.com/huangshuwei/jquery.smartbox" target="_blank">我的github</a>。</p>',
+            footer:'<a id="openAndClose_close" href="javascript:void(0);">close box</a>',
+            isAutoShow:false,
+            isCloseOnOverlayClick: false, // |type:bool
+            overlayOpacity: 0.3, // 遮罩层的透明度 0.1~1  |type:float
+            isShowClose: false // 是否显示关闭图标 |type:bool
+        });
+
+        $("#openAndClose_open").click(function () {
+            $("#openAndClose").smartbox('open');
+        });
+
+        $("#openAndClose_close").click(function () {
+            $("#openAndClose").smartbox('close');
+        });
+    })
+</script>
+    </div>
+    <!--打开和关闭 End-->
+    <!--多窗口模式（同级） Start-->
+    <div class="section">
+        <h2>
+            <a id="anchor_multipleBox_sameLevel">多窗口模式（同级）</a>
+        </h2>
+        <p>
+            支持多窗口，条件是不设置属性‘zIndex’，或者多个弹窗‘zIndex’属性设置成相同。<br>这是你能看到当两个窗口重叠时，点击在下面的一个，
+            可以让交换上下的位置。
+        </p>
+        <ul class="tabs">
+            <li class="active"><a href="javascript:;" class="tab-output">多窗口模式（同级）</a></li>
+            <li><a href="javascript:;" class="tab-html">HTML</a></li>
+            <li><a href="javascript:;" class="tab-js">JavaScript</a></li>
+        </ul>
+        <div class="tabContainer">
+            <div class="operation">
+                <div id="multipleBox_sameLevel1" style="display: none; border-color: rgb(173, 171, 171); border-width: 1px; border-radius: 0px; width: 400px; height: 300px; z-index: 9999; top: 304.5px; left: 750.5px;" class="smartBox"><div class="smartBox_header smartBox_header_border" style="height: 50px; line-height: 50px; background-color: rgb(238, 238, 238);"><div class="smartBox_title">这是box1</div><a class="smartBox_header_close_normal"></a></div><div class="smartBox_body" style="height: 249px;"><p class="introduce_msg"><a id="multipleBox_sameLevel2_open" href="javascript:void(0);">点我看效果2</a></p></div></div>
+                <div id="multipleBox_sameLevel2" style="display: none; border-color: rgb(173, 171, 171); border-width: 1px; border-radius: 0px; width: 500px; height: 200px; z-index: 9999; top: 354.5px; left: 700.5px;" class="smartBox"><div class="smartBox_header smartBox_header_border" style="height: 50px; line-height: 50px; background-color: rgb(238, 238, 238);"><div class="smartBox_title">这是box2</div><a class="smartBox_header_close_normal"></a></div><div class="smartBox_body" style="height: 98px;"><p class="introduce_msg">smartbox 支持多个弹层</p></div><div class="smartBox_footer" style="height: 50px; line-height: 50px; background-color: rgb(255, 255, 255);">box2</div></div>
+                <a id="multipleBox_sameLevel1_open" href="javascript:void(0);">点我看效果1</a>
+            </div>
+            <pre class="prettyprint prettyprinted" style="display:none;"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"multipleBox_sameLevel1"</span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="atv">"</span><span class="pln">display</span><span class="pun">:</span><span class="pln"> none</span><span class="pun">;</span><span class="atv">"</span><span class="tag">&gt;&lt;/div&gt;</span><span class="pln">
+</span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"multipleBox_sameLevel2"</span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="atv">"</span><span class="pln">display</span><span class="pun">:</span><span class="pln"> none</span><span class="pun">;</span><span class="atv">"</span><span class="tag">&gt;&lt;/div&gt;</span><span class="pln">
+</span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"multipleBox_sameLevel1_open"</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"javascript:void(0);"</span><span class="tag">&gt;</span><span class="pln">点我看效果1</span><span class="tag">&lt;/a&gt;</span></pre>
+        <pre class="prettyprint prettyprinted" style="display: none;"><span class="pln">$</span><span class="pun">(</span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        $</span><span class="pun">(</span><span class="str">"#multipleBox_sameLevel1"</span><span class="pun">).</span><span class="pln">smartbox</span><span class="pun">({</span><span class="pln">
+            title</span><span class="pun">:</span><span class="pln"> </span><span class="str">'这是box1'</span><span class="pun">,</span><span class="pln">
+            width</span><span class="pun">:</span><span class="pln"> </span><span class="lit">400</span><span class="pun">,</span><span class="pln">
+            height</span><span class="pun">:</span><span class="pln"> </span><span class="lit">300</span><span class="pun">,</span><span class="pln">
+            content</span><span class="pun">:</span><span class="str">'&lt;p class="introduce_msg"&gt;&lt;a id="multipleBox_sameLevel2_open" href="javascript:void(0);"&gt;点我看效果2&lt;/a&gt;&lt;/p&gt;'</span><span class="pun">,</span><span class="pln">
+            isAutoShow</span><span class="pun">:</span><span class="kwd">false</span><span class="pun">,</span><span class="pln">
+            isShowFooter</span><span class="pun">:</span><span class="kwd">false</span><span class="pun">,</span><span class="pln">
+            isShowOverlay</span><span class="pun">:</span><span class="kwd">false</span><span class="pln">
+        </span><span class="pun">});</span><span class="pln">
+
+        $</span><span class="pun">(</span><span class="str">"#multipleBox_sameLevel2"</span><span class="pun">).</span><span class="pln">smartbox</span><span class="pun">({</span><span class="pln">
+            title</span><span class="pun">:</span><span class="pln"> </span><span class="str">'这是box2'</span><span class="pun">,</span><span class="pln">
+            width</span><span class="pun">:</span><span class="pln"> </span><span class="lit">500</span><span class="pun">,</span><span class="pln">
+            height</span><span class="pun">:</span><span class="pln"> </span><span class="lit">200</span><span class="pun">,</span><span class="pln">
+            content</span><span class="pun">:</span><span class="pln"> </span><span class="str">'&lt;p class="introduce_msg"&gt;smartbox 支持多个弹层&lt;/p&gt;'</span><span class="pun">,</span><span class="pln">
+            footer</span><span class="pun">:</span><span class="str">'box2'</span><span class="pun">,</span><span class="pln">
+            isAutoShow</span><span class="pun">:</span><span class="kwd">false</span><span class="pun">,</span><span class="pln">
+            isShowOverlay</span><span class="pun">:</span><span class="kwd">false</span><span class="pln">
+        </span><span class="pun">});</span><span class="pln">
+
+        $</span><span class="pun">(</span><span class="str">"#multipleBox_sameLevel1_open"</span><span class="pun">).</span><span class="pln">click</span><span class="pun">(</span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+            $</span><span class="pun">(</span><span class="str">"#multipleBox_sameLevel1"</span><span class="pun">).</span><span class="pln">smartbox</span><span class="pun">(</span><span class="str">'open'</span><span class="pun">);</span><span class="pln">
+        </span><span class="pun">});</span><span class="pln">
+
+        $</span><span class="pun">(</span><span class="str">"#multipleBox_sameLevel2_open"</span><span class="pun">).</span><span class="pln">click</span><span class="pun">(</span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+            $</span><span class="pun">(</span><span class="str">"#multipleBox_sameLevel2"</span><span class="pun">).</span><span class="pln">smartbox</span><span class="pun">(</span><span class="str">'open'</span><span class="pun">);</span><span class="pln">
+        </span><span class="pun">});</span><span class="pln">
+    </span><span class="pun">})</span></pre></div>
+<script type="text/javascript">
+    $(function () {
+        $("#multipleBox_sameLevel1").smartbox({
+            title: '这是box1',
+            width: 400,
+            height: 300,
+            content:'<p class="introduce_msg"><a id="multipleBox_sameLevel2_open" href="javascript:void(0);">点我看效果2</a></p>',
+            isAutoShow:false,
+            isShowFooter:false,
+            isShowOverlay:false
+        });
+
+        $("#multipleBox_sameLevel2").smartbox({
+            title: '这是box2',
+            width: 500,
+            height: 200,
+            content: '<p class="introduce_msg">smartbox 支持多个弹层</p>',
+            footer:'box2',
+            isAutoShow:false,
+            isShowOverlay:false
+        });
+
+        $("#multipleBox_sameLevel1_open").click(function () {
+            $("#multipleBox_sameLevel1").smartbox('open');
+        });
+
+        $("#multipleBox_sameLevel2_open").click(function () {
+            $("#multipleBox_sameLevel2").smartbox('open');
+        });
+    })
+</script>
+    </div>
+    <!--多窗口模式（同级） End-->
+    <!--多窗口模式（不同级） Start-->
+    <div class="section">
+        <h2>
+            <a id="anchor_multipleBox_differLevel">多窗口模式（不同级）</a>
+        </h2>
+        <p>
+            此插件不仅支持多窗口同级模式，并且支持不同级的形式。要求条件是设置‘zIndex’,‘zIndex’值大的在上方，
+            <br>并且要求设置遮罩层即‘isShowOverlay:true’，因为不同级模式不适用遮罩层就没有意义了。
+        </p>
+        <ul class="tabs">
+            <li class="active"><a href="javascript:;" class="tab-output">多窗口模式（不同级）</a></li>
+            <li><a href="javascript:;" class="tab-html">HTML</a></li>
+            <li><a href="javascript:;" class="tab-js">JavaScript</a></li>
+        </ul>
+        <div class="tabContainer">
+            <div class="operation">
+                <div id="multipleBox_differLevel1" style="display: none; border-color: rgb(173, 171, 171); border-width: 1px; border-radius: 0px; width: 600px; height: 500px; z-index: 998; top: 204.5px; left: 650.5px;" class="smartBox"><div class="smartBox_header smartBox_header_border" style="height: 50px; line-height: 50px; background-color: rgb(238, 238, 238);"><div class="smartBox_title">这是box1</div><a class="smartBox_header_close_normal"></a></div><div class="smartBox_body" style="height: 449px;"><p class="introduce_msg"><a id="multipleBox_differLevel2_open" href="javascript:void(0);">点我看效果2</a></p></div></div>
+                <div id="multipleBox_differLevel2" style="display: none; border-color: rgb(173, 171, 171); border-width: 1px; border-radius: 0px; width: 300px; height: 200px; z-index: 999; top: 354.5px; left: 800.5px;" class="smartBox"><div class="smartBox_header smartBox_header_border" style="height: 50px; line-height: 50px; background-color: rgb(238, 238, 238);"><div class="smartBox_title">这是box2</div><a class="smartBox_header_close_normal"></a></div><div class="smartBox_body" style="height: 98px;"><p class="introduce_msg">smartbox 支持多个弹层</p></div><div class="smartBox_footer" style="height: 50px; line-height: 50px; background-color: rgb(255, 255, 255);">box2</div></div>
+                <a id="multipleBox_differLevel1_open" href="javascript:void(0);">点我看效果1</a>
+            </div>
+            <pre class="prettyprint prettyprinted" style="display:none;"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"multipleBox_differLevel1"</span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="atv">"</span><span class="pln">display</span><span class="pun">:</span><span class="pln"> none</span><span class="pun">;</span><span class="atv">"</span><span class="tag">&gt;&lt;/div&gt;</span><span class="pln">
+</span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"multipleBox_differLevel2"</span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="atv">"</span><span class="pln">display</span><span class="pun">:</span><span class="pln"> none</span><span class="pun">;</span><span class="atv">"</span><span class="tag">&gt;&lt;/div&gt;</span><span class="pln">
+</span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"multipleBox_differLevel1_open"</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"javascript:void(0);"</span><span class="tag">&gt;</span><span class="pln">点我看效果1</span><span class="tag">&lt;/a&gt;</span></pre>
+        <pre class="prettyprint prettyprinted" style="display: none;"><span class="pln">$</span><span class="pun">(</span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        $</span><span class="pun">(</span><span class="str">"#multipleBox_differLevel1"</span><span class="pun">).</span><span class="pln">smartbox</span><span class="pun">({</span><span class="pln">
+            title</span><span class="pun">:</span><span class="pln"> </span><span class="str">'这是box1'</span><span class="pun">,</span><span class="pln">
+            width</span><span class="pun">:</span><span class="pln"> </span><span class="lit">600</span><span class="pun">,</span><span class="pln">
+            height</span><span class="pun">:</span><span class="pln"> </span><span class="lit">500</span><span class="pun">,</span><span class="pln">
+            content</span><span class="pun">:</span><span class="str">'&lt;p class="introduce_msg"&gt;&lt;a id="multipleBox_differLevel2_open" href="javascript:void(0);"&gt;点我看效果2&lt;/a&gt;&lt;/p&gt;'</span><span class="pun">,</span><span class="pln">
+            isAutoShow</span><span class="pun">:</span><span class="kwd">false</span><span class="pun">,</span><span class="pln">
+            isShowFooter</span><span class="pun">:</span><span class="kwd">false</span><span class="pun">,</span><span class="pln">
+            isShowOverlay</span><span class="pun">:</span><span class="kwd">true</span><span class="pun">,</span><span class="pln">
+            isCloseOnOverlayClick</span><span class="pun">:</span><span class="kwd">false</span><span class="pun">,</span><span class="pln">
+            zIndex</span><span class="pun">:</span><span class="lit">998</span><span class="pln">
+        </span><span class="pun">});</span><span class="pln">
+
+        $</span><span class="pun">(</span><span class="str">"#multipleBox_differLevel2"</span><span class="pun">).</span><span class="pln">smartbox</span><span class="pun">({</span><span class="pln">
+            title</span><span class="pun">:</span><span class="pln"> </span><span class="str">'这是box2'</span><span class="pun">,</span><span class="pln">
+            width</span><span class="pun">:</span><span class="pln"> </span><span class="lit">300</span><span class="pun">,</span><span class="pln">
+            height</span><span class="pun">:</span><span class="pln"> </span><span class="lit">200</span><span class="pun">,</span><span class="pln">
+            content</span><span class="pun">:</span><span class="pln"> </span><span class="str">'&lt;p class="introduce_msg"&gt;smartbox 支持多个弹层&lt;/p&gt;'</span><span class="pun">,</span><span class="pln">
+            footer</span><span class="pun">:</span><span class="str">'box2'</span><span class="pun">,</span><span class="pln">
+            isAutoShow</span><span class="pun">:</span><span class="kwd">false</span><span class="pun">,</span><span class="pln">
+            isShowOverlay</span><span class="pun">:</span><span class="kwd">true</span><span class="pun">,</span><span class="pln">
+            isCloseOnOverlayClick</span><span class="pun">:</span><span class="kwd">false</span><span class="pun">,</span><span class="pln">
+            zIndex</span><span class="pun">:</span><span class="lit">999</span><span class="pln">
+        </span><span class="pun">});</span><span class="pln">
+
+        $</span><span class="pun">(</span><span class="str">"#multipleBox_differLevel1_open"</span><span class="pun">).</span><span class="pln">click</span><span class="pun">(</span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+            $</span><span class="pun">(</span><span class="str">"#multipleBox_differLevel1"</span><span class="pun">).</span><span class="pln">smartbox</span><span class="pun">(</span><span class="str">'open'</span><span class="pun">);</span><span class="pln">
+        </span><span class="pun">});</span><span class="pln">
+
+        $</span><span class="pun">(</span><span class="str">"#multipleBox_differLevel2_open"</span><span class="pun">).</span><span class="pln">click</span><span class="pun">(</span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+            $</span><span class="pun">(</span><span class="str">"#multipleBox_differLevel2"</span><span class="pun">).</span><span class="pln">smartbox</span><span class="pun">(</span><span class="str">'open'</span><span class="pun">);</span><span class="pln">
+        </span><span class="pun">});</span><span class="pln">
+    </span><span class="pun">})</span></pre></div>
+<script type="text/javascript">
+    $(function () {
+        $("#multipleBox_differLevel1").smartbox({
+            title: '这是box1',
+            width: 600,
+            height: 500,
+            content:'<p class="introduce_msg"><a id="multipleBox_differLevel2_open" href="javascript:void(0);">点我看效果2</a></p>',
+            isAutoShow:false,
+            isShowFooter:false,
+            isShowOverlay:true,
+            isCloseOnOverlayClick:false,
+            zIndex:998
+        });
+
+        $("#multipleBox_differLevel2").smartbox({
+            title: '这是box2',
+            width: 300,
+            height: 200,
+            content: '<p class="introduce_msg">smartbox 支持多个弹层</p>',
+            footer:'box2',
+            isAutoShow:false,
+            isShowOverlay:true,
+            isCloseOnOverlayClick:false,
+            zIndex:999
+        });
+
+        $("#multipleBox_differLevel1_open").click(function () {
+            $("#multipleBox_differLevel1").smartbox('open');
+        });
+
+        $("#multipleBox_differLevel2_open").click(function () {
+            $("#multipleBox_differLevel2").smartbox('open');
+        });
+    })
+</script>
+    </div>
+    <!--多窗口模式（不同级） End-->
+    <!--回调事件 Start-->
+    <div class="section">
+        <h2>
+            <a id="anchor_callbackEvents">回调事件</a>
+        </h2>
+        <p>
+            此插件支持多种回调事件，允许在各个阶段处理自己的业务逻辑。
+        </p>
+        <ul class="tabs">
+            <li class="active"><a href="javascript:;" class="tab-output">回调事件</a></li>
+            <li><a href="javascript:;" class="tab-html">HTML</a></li>
+            <li><a href="javascript:;" class="tab-js">JavaScript</a></li>
+        </ul>
+        <div class="tabContainer">
+            <div class="operation">
+                <div id="callbackEvents" style="display: none; border-color: rgb(173, 171, 171); border-width: 1px; border-radius: 0px; width: 495px; height: 610px; z-index: 9999; top: 149.5px; left: 703px;" class="smartBox"><div class="smartBox_header"><a class="smartBox_header_close_circle"></a></div><div class="smartBox_body" style="height: 610px;"></div></div>
+                <a id="callbackEvents_open" href="javascript:void(0);">点我看效果</a>
+            </div>
+            <pre class="prettyprint prettyprinted" style="display:none;"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"callbackEvents"</span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="atv">"</span><span class="pln">display</span><span class="pun">:</span><span class="pln"> none</span><span class="pun">;</span><span class="atv">"</span><span class="tag">&gt;&lt;/div&gt;</span><span class="pln">
+</span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"callbackEvents_open"</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"javascript:void(0);"</span><span class="tag">&gt;</span><span class="pln">点我看效果</span><span class="tag">&lt;/a&gt;</span></pre>
+        <pre class="prettyprint prettyprinted" style="display: none;"><span class="pln">$</span><span class="pun">(</span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        $</span><span class="pun">(</span><span class="str">"#callbackEvents"</span><span class="pun">).</span><span class="pln">smartbox</span><span class="pun">({</span><span class="pln">
+            type</span><span class="pun">:</span><span class="pln"> </span><span class="str">'option'</span><span class="pun">,</span><span class="com">// 'html':title、content、footer 内容来自html；'option':title、content、footer 内容来自配置 |type string</span><span class="pln">
+            ajaxSetting</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+                contentType</span><span class="pun">:</span><span class="pln"> </span><span class="str">'img'</span><span class="pun">,</span><span class="com">// 'html':异步加载html；'img':异步加载图片；'iframe':异步加载iframe（可以解决跨域问题） |type:string</span><span class="pln">
+                url</span><span class="pun">:</span><span class="pln"> </span><span class="str">'http://smartbox.huangsw.com/demo/imgs/Vincent_big.jpg'</span><span class="pun">,</span><span class="pln">
+                isShowLoading</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">,</span><span class="com">// 是否显示加载效果 |type:bool</span><span class="pln">
+                loadingType</span><span class="pun">:</span><span class="pln"> </span><span class="str">'img'</span><span class="pun">,</span><span class="com">// 'img':加载中以图片的效果展示；'text':加载中以文字的形式展示 |type:string</span><span class="pln">
+                errorContent</span><span class="pun">:</span><span class="pln"> </span><span class="str">'&lt;span style="color:red;"&gt;请关闭弹窗重新再试！&lt;/span&gt;'</span><span class="pln">
+            </span><span class="pun">},</span><span class="pln">
+            title</span><span class="pun">:</span><span class="pln"> </span><span class="str">'异步获取图片'</span><span class="pun">,</span><span class="pln">
+            width</span><span class="pun">:</span><span class="pln"> </span><span class="lit">495</span><span class="pun">,</span><span class="pln">
+            height</span><span class="pun">:</span><span class="pln"> </span><span class="lit">610</span><span class="pun">,</span><span class="pln">
+            closeType</span><span class="pun">:</span><span class="pln"> </span><span class="str">'out'</span><span class="pun">,</span><span class="pln">
+            isAutoShow</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">,</span><span class="pln">
+            isShowTitle</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">,</span><span class="pln">
+            isShowFooter</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">,</span><span class="pln">
+
+            beforeShow</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+                </span><span class="kwd">return</span><span class="pln"> confirm</span><span class="pun">(</span><span class="str">'确定要打开？'</span><span class="pun">)</span><span class="pln">
+            </span><span class="pun">},</span><span class="pln">
+            afterShow</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+                alert</span><span class="pun">(</span><span class="str">'afterShow'</span><span class="pun">);</span><span class="pln">
+            </span><span class="pun">},</span><span class="pln">
+
+            beforeRequest</span><span class="pun">:</span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+                alert</span><span class="pun">(</span><span class="str">'beforeRequest'</span><span class="pun">);</span><span class="pln">
+            </span><span class="pun">},</span><span class="pln">
+
+            afterRequest</span><span class="pun">:</span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+                alert</span><span class="pun">(</span><span class="str">'afterRequest'</span><span class="pun">);</span><span class="pln">
+            </span><span class="pun">},</span><span class="pln">
+
+            beforeClose</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+                </span><span class="kwd">return</span><span class="pln"> confirm</span><span class="pun">(</span><span class="str">'确定要关闭？'</span><span class="pun">)</span><span class="pln">
+            </span><span class="pun">},</span><span class="pln">
+            afterClose</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+                alert</span><span class="pun">(</span><span class="str">'afterClose'</span><span class="pun">);</span><span class="pln">
+            </span><span class="pun">}</span><span class="pln">
+        </span><span class="pun">});</span><span class="pln">
+
+        $</span><span class="pun">(</span><span class="str">"#callbackEvents_open"</span><span class="pun">).</span><span class="pln">click</span><span class="pun">(</span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+            $</span><span class="pun">(</span><span class="str">"#callbackEvents"</span><span class="pun">).</span><span class="pln">smartbox</span><span class="pun">(</span><span class="str">'open'</span><span class="pun">);</span><span class="pln">
+        </span><span class="pun">});</span><span class="pln">
+    </span><span class="pun">})</span></pre></div>
+<script type="text/javascript">
+    $(function () {
+        $("#callbackEvents").smartbox({
+            type: 'option',// 'html':title、content、footer 内容来自html；'option':title、content、footer 内容来自配置 |type string
+            ajaxSetting: {
+                contentType: 'img',// 'html':异步加载html；'img':异步加载图片；'iframe':异步加载iframe（可以解决跨域问题） |type:string
+                url: 'http://smartbox.huangsw.com/demo/imgs/Vincent_big.jpg',
+                isShowLoading: true,// 是否显示加载效果 |type:bool
+                loadingType: 'img',// 'img':加载中以图片的效果展示；'text':加载中以文字的形式展示 |type:string
+                errorContent: '<span style="color:red;">请关闭弹窗重新再试！</span>'
+            },
+            title: '异步获取图片',
+            width: 495,
+            height: 610,
+            closeType: 'out',
+            isAutoShow: false,
+            isShowTitle: false,
+            isShowFooter: false,
+
+            beforeShow: function () {
+                return confirm('确定要打开？')
+            },
+            afterShow: function () {
+                alert('afterShow');
+            },
+
+            beforeRequest:function () {
+                alert('beforeRequest');
+            },
+
+            afterRequest:function () {
+                alert('afterRequest');
+            },
+
+            beforeClose: function () {
+                return confirm('确定要关闭？')
+            },
+            afterClose: function () {
+                alert('afterClose');
+            }
+        });
+
+        $("#callbackEvents_open").click(function () {
+            $("#callbackEvents").smartbox('open');
+        });
+    })
+</script>
+    </div>
+    <!--回调事件 End-->
+
+    <!--其他设置 Start-->
+    <div class="section">
+        <h2>
+            <a id="anchor_setBgColor">其他设置</a>
+        </h2>
+        <p>
+            插件支持自定义title、footer背景色、border 的颜色、宽度、圆角等。
+        </p>
+        <ul class="tabs">
+            <li class="active"><a href="javascript:;" class="tab-output">其他设置</a></li>
+            <li><a href="javascript:;" class="tab-html">HTML</a></li>
+            <li><a href="javascript:;" class="tab-js">JavaScript</a></li>
+        </ul>
+        <div class="tabContainer">
+            <div class="operation">
+                <div id="otherSetting" style="display: none; border-color: rgb(120, 186, 243); border-width: 2px; border-radius: 10px; width: 600px; height: 380px; z-index: 9999; top: 263.5px; left: 649.5px;" class="smartBox"><div class="smartBox_header smartBox_header_border" style="height: 50px; line-height: 50px; border-radius: 7px 7px 0px 0px; background-color: rgb(120, 186, 243);"><div class="smartBox_title">标题</div><a class="smartBox_header_close_normal"></a></div><div class="smartBox_body" style="height: 278px;"><p class="introduce_msg">smartbox.js 是一款基于jquery 的<span style="color: red;">开源的</span>弹出层插件，它小巧但功能强大，允许用户在一个界面同时弹出多个对话框。弹出的内容支持多种形式，样式简洁多样。想要了解更多可以查看<a target="_blank" href="http://smartbox.huangsw.com/cn/introduce.html">官方文档</a>。 查看源码以及demo可以访问<a href="https://github.com/huangshuwei/jquery.smartbox" target="_blank">我的github</a>。</p></div><div class="smartBox_footer" style="height: 50px; line-height: 50px; border-radius: 0px 0px 7px 7px; background-color: rgb(120, 186, 243);">底部</div></div>
+                <a id="otherSetting_open" href="javascript:void(0);">点我看效果</a>
+            </div>
+            <pre class="prettyprint prettyprinted" style="display:none;"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"otherSetting"</span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="atv">"</span><span class="pln">display</span><span class="pun">:</span><span class="pln"> none</span><span class="pun">;</span><span class="atv">"</span><span class="tag">&gt;&lt;/div&gt;</span><span class="pln">
+</span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"otherSetting_open"</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"javascript:void(0);"</span><span class="tag">&gt;</span><span class="pln">点我看效果</span><span class="tag">&lt;/a&gt;</span></pre>
+        <pre class="prettyprint prettyprinted" style="display: none;"><span class="pln">$</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">(){</span><span class="pln">
+        $</span><span class="pun">(</span><span class="str">"#otherSetting"</span><span class="pun">).</span><span class="pln">smartbox</span><span class="pun">({</span><span class="pln">
+            title</span><span class="pun">:</span><span class="str">'标题'</span><span class="pun">,</span><span class="pln">
+            footer</span><span class="pun">:</span><span class="str">'底部'</span><span class="pun">,</span><span class="pln">
+            titleBgColor</span><span class="pun">:</span><span class="str">'#78baf3'</span><span class="pun">,</span><span class="pln">
+            footerBgColor</span><span class="pun">:</span><span class="str">'#78baf3'</span><span class="pun">,</span><span class="pln">
+            borderColor</span><span class="pun">:</span><span class="str">'#78baf3'</span><span class="pun">,</span><span class="pln">
+            borderRadius</span><span class="pun">:</span><span class="lit">10</span><span class="pun">,</span><span class="pln">
+            borderWidth</span><span class="pun">:</span><span class="lit">2</span><span class="pun">,</span><span class="pln">
+            width</span><span class="pun">:</span><span class="lit">600</span><span class="pun">,</span><span class="pln">
+            height</span><span class="pun">:</span><span class="lit">380</span><span class="pun">,</span><span class="pln">
+            content</span><span class="pun">:</span><span class="str">'&lt;p class="introduce_msg"&gt;smartbox.js 是一款基于jquery 的&lt;span style="color: red;"&gt;开源的&lt;/span&gt;弹出层插件，它小巧但功能强大，允许用户在一个界面同时弹出多个对话框。弹出的内容支持多种形式，样式简洁多样。想要了解更多可以查看&lt;a target="_blank" href="http://smartbox.huangsw.com/cn/introduce.html"&gt;官方文档&lt;/a&gt;。 查看源码以及demo可以访问&lt;a href="https://github.com/huangshuwei/jquery.smartbox" target="_blank"&gt;我的github&lt;/a&gt;。&lt;/p&gt;'</span><span class="pun">,</span><span class="pln">
+            isAutoShow</span><span class="pun">:</span><span class="kwd">false</span><span class="pun">,</span><span class="pln">
+            overlayOpacity</span><span class="pun">:</span><span class="lit">0.1</span><span class="pln">
+        </span><span class="pun">});</span><span class="pln">
+
+        $</span><span class="pun">(</span><span class="str">"#otherSetting_open"</span><span class="pun">).</span><span class="pln">click</span><span class="pun">(</span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+            $</span><span class="pun">(</span><span class="str">"#otherSetting"</span><span class="pun">).</span><span class="pln">smartbox</span><span class="pun">(</span><span class="str">'open'</span><span class="pun">);</span><span class="pln">
+        </span><span class="pun">});</span><span class="pln">
+    </span><span class="pun">})</span></pre></div>
+<script type="text/javascript">
+    $(function(){
+        $("#otherSetting").smartbox({
+            title:'标题',
+            footer:'底部',
+            titleBgColor:'#78baf3',
+            footerBgColor:'#78baf3',
+            borderColor:'#78baf3',
+            borderRadius:10,
+            borderWidth:2,
+            width:600,
+            height:380,
+            content:'<p class="introduce_msg">smartbox.js 是一款基于jquery 的<span style="color: red;">开源的</span>弹出层插件，它小巧但功能强大，允许用户在一个界面同时弹出多个对话框。弹出的内容支持多种形式，样式简洁多样。想要了解更多可以查看<a target="_blank" href="http://smartbox.huangsw.com/cn/introduce.html">官方文档</a>。 查看源码以及demo可以访问<a href="https://github.com/huangshuwei/jquery.smartbox" target="_blank">我的github</a>。</p>',
+            isAutoShow:false,
+            overlayOpacity:0.1
+        });
+
+        $("#otherSetting_open").click(function () {
+            $("#otherSetting").smartbox('open');
+        });
+    })
+</script>
+    </div>
+    <!--其他设置 End-->
+
+    <!--结束了-->
+    <div class="section">
+        这里只是展示了
+        <span style="color: red;">部分的功能</span>
+        ，更多功能请看<a href="https://smartbox.huangsw.com/cn/api.html">api文档</a>
+        <br><br><br><br><br><br><br><br>
+    </div>
+</div>
+
+
+<script src="./libs_examples.min.js" type="text/javascript"></script>
+
+<!--<script src="../public/js/prettify.min.js" type="text/javascript"></script>
+<script src="../public/js/jquery.smartbox.js?v=1" type="text/javascript"></script>
+<script type="text/javascript" src="../src/js/examples.js"></script>-->
+
+<div class="smartBoxOverlay 9998" style="z-index: 9998; opacity: 0.3;"></div><div class="smartBoxOverlay 9998" style="z-index: 9998; opacity: 0.3;"></div><div class="smartBoxOverlay 9998" style="z-index: 9998; opacity: 0.3;"></div><div class="smartBoxOverlay 9998" style="z-index: 9998; opacity: 0.3;"></div><div class="smartBoxOverlay 9998" style="z-index: 9998; opacity: 0.3;"></div><div class="smartBoxOverlay 9998" style="z-index: 9998; opacity: 0.3;"></div><div class="smartBoxOverlay 9998" style="z-index: 9998; opacity: 0.3;"></div><div class="smartBoxOverlay 997" style="z-index: 997; opacity: 0.3;"></div><div class="smartBoxOverlay 998" style="z-index: 998; opacity: 0.3;"></div><div class="smartBoxOverlay 9998" style="z-index: 9998; opacity: 0.3;"></div><div class="smartBoxOverlay 9998" style="z-index: 9998; opacity: 0.1;"></div></body></html>
