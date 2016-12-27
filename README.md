@@ -18,3 +18,5 @@ Some rannalhi javascript website effect collections, some javascript、angularjs
 [js_2048](https://silence940109.github.io/FrontJS/js_2048/)
 
 [jQuery_Emoji](https://silence940109.github.io/FrontJS/jQuery_Emoji)
+
+[jQuery_Dialog](https://silence940109.github.io/FrontJS/jQuery_Dialog)
