@@ -7,7 +7,7 @@ require.config({
         jqueryUI : ['jquery']
     },
    paths :{
-       jquery : 'http://code.jquery.com/jquery-1.12.4.min',
+       jquery : 'https://code.jquery.com/jquery-1.12.4.min',
        //jquery : '../plugins/jquery-1.12.3.min',
        jqueryUI: '../plugins/jquery-ui.min'
    }
