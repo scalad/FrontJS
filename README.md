@@ -22,3 +22,5 @@ Some rannalhi javascript website effect collections, some javascript、angularjs
 * [jQuery_Dialog](https://silence940109.github.io/FrontJS/jQuery_Dialog)
 
 * [jQuery_Smartbox](https://silence940109.github.io/FrontJS/jQuery_Smartbox)
+
+* [JavaScript_Load_Image](https://silence940109.github.io/FrontJS/JavaScript_Load_Image)
