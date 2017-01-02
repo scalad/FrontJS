@@ -1,0 +1,90 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-size: 12px;
+}
+
+div {
+    float: left;
+    width: 100%;
+}
+
+li {
+    float: left;
+    list-style: none;
+}
+
+.tabMenu {
+    width: 100%;
+}
+#mathDiv > p{
+    margin: 0;
+}
+.tabTitle {
+    width: 100%;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.tabTitle ul {
+    width: 100%;
+    height: auto;
+    margin-bottom: -1px;
+    padding-left: 5px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.tabTitle li {
+    padding: 5px;
+    padding-bottom: 7px;
+    width: 80px;
+    text-align: center;
+    line-height: 16px;
+}
+
+.tabTitle li {
+    cursor: pointer;
+}
+
+.tabTitle li.current {
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #fff;
+}
+
+.tabContent li {
+    width: 30px;
+    height: 30px;
+    margin: 2px 3px;
+    background-image: url(math.png);
+    background-repeat: no-repeat;
+    border: 1px solid rgba(0,0,0,0);
+}
+.tabContent li:hover{
+    border: 1px solid #3071a9;
+}
+.help {
+    float: right;
+    width: 150px;
+    text-align: right;
+}
+
+.tabContent div.mathBox div.mathIcon {
+    overflow: hidden;
+    height: 110px;
+    padding-left: 3px;
+}
+
+.tabContent div.mathBox div.more {
+    width: 95%;
+    text-align: right;
+    padding: 5px;
+    cursor: pointer;
+}
+
+div.ad {
+    position: fixed;
+    top: 280px;
+}
