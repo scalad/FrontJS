@@ -28,3 +28,5 @@ Some rannalhi javascript website effect collections, some javascript、angularjs
 * [jQuery_PathFinding](https://silence940109.github.io/FrontJS/jQuery_PathFinding)
  
 * [KindEditor-FontAwesome Rich Text Editor](https://silence940109.github.io/FrontJS/KindEditor-FontAwesome)
+
+* [highcharts](https://silence940109.github.io/FrontJS/highcharts)
