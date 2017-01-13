@@ -1,0 +1,609 @@
+/*!
+ *  Font Awesome 4.6.3 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ */
+
+
+/* FONT PATH
+ * -------------------------- */
+
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('../fonts/fontawesome-webfont.eot?v=4.6.3');
+    src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.6.3') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff2?v=4.6.3') format('woff2'), url('../fonts/fontawesome-webfont.woff?v=4.6.3') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.6.3') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.6.3#fontawesomeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    color: #666;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* makes the font 33% larger relative to the icon container */
+
+.fa-lg {
+    font-size: 1.33333333em;
+    line-height: 0.75em;
+    vertical-align: -15%;
+}
+
+.fa-2x {
+    font-size: 2em;
+}
+
+.fa-3x {
+    font-size: 3em;
+}
+
+.fa-4x {
+    font-size: 4em;
+}
+
+.fa-5x {
+    font-size: 5em;
+}
+
+.fa-fw {
+    width: 1.28571429em;
+    text-align: center;
+}
+
+.fa-ul {
+    padding-left: 0;
+    margin-left: 2.14285714em;
+    list-style-type: none;
+}
+
+.fa-ul > li {
+    position: relative;
+}
+
+.fa-li {
+    position: absolute;
+    left: -2.14285714em;
+    width: 2.14285714em;
+    top: 0.14285714em;
+    text-align: center;
+}
+
+.fa-spin {
+    -webkit-animation: fa-spin 2s infinite linear;
+    animation: fa-spin 2s infinite linear;
+}
+
+.fa-pulse {
+    -webkit-animation: fa-spin 1s infinite steps(8);
+    animation: fa-spin 1s infinite steps(8);
+}
+
+@-webkit-keyframes fa-spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+
+@keyframes fa-spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+
+.fa-rotate-90 {
+    -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.fa-rotate-180 {
+    -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.fa-rotate-270 {
+    -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
+    -webkit-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+}
+
+.fa-flip-horizontal {
+    -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
+    -webkit-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+    transform: scale(-1, 1);
+}
+
+.fa-flip-vertical {
+    -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
+    -webkit-transform: scale(1, -1);
+    -ms-transform: scale(1, -1);
+    transform: scale(1, -1);
+}
+
+:root .fa-rotate-90,
+:root .fa-rotate-180,
+:root .fa-rotate-270,
+:root .fa-flip-horizontal,
+:root .fa-flip-vertical {
+    filter: none;
+}
+
+.fa-stack {
+    position: relative;
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    line-height: 2em;
+    vertical-align: middle;
+}
+
+.fa-stack-1x,
+.fa-stack-2x {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.fa-stack-1x {
+    line-height: inherit;
+}
+
+.fa-stack-2x {
+    font-size: 2em;
+}
+
+.fa-inverse {
+    color: #ffffff;
+}
+
+
+/* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen readers do not read off random characters that represent icons */
+
+.fa-audio:before {
+    content: "\f001";
+}
+
+.fa-redo:before {
+    content: "\f01e";
+}
+
+.fa-quickformat:before {
+    content: "\f022";
+}
+
+.fa-print:before {
+    content: "\f02f";
+}
+
+.fa-forecolor:before {
+    content: "\f031";
+    color: #ff6600;
+}
+
+.fa-hilitecolor:before {
+    content: "\f031";
+    background-color: #00ffff;
+}
+
+.fa-fontname:before {
+    content: "\f031";
+}
+
+.fa-bold:before {
+    content: "\f032";
+}
+
+.fa-italic:before {
+    content: "\f033";
+}
+
+.fa-fontsize:before {
+    content: "\f034";
+}
+
+.fa-text-width:before {
+    content: "\f035";
+}
+
+.fa-justifyleft:before {
+    content: "\f036";
+}
+
+.fa-justifycenter:before {
+    content: "\f037";
+}
+
+.fa-justifyright:before {
+    content: "\f038";
+}
+
+.fa-justifyfull:before {
+    content: "\f039";
+}
+
+.fa-outdent:before {
+    content: "\f03b";
+}
+
+.fa-indent:before {
+    content: "\f03c";
+}
+
+.fa-media:before {
+    content: "\f03d";
+}
+
+.fa-image:before {
+    content: "\f03e";
+}
+
+.fa-baidumap:before {
+    content: "\f041";
+}
+
+.fa-about:before {
+    content: "\f059";
+}
+
+.fa-hr:before {
+    content: "\f068";
+}
+
+.fa-preview:before {
+    content: "\f06e";
+}
+
+.fa-insertfile:before,
+.fa-folder:before {
+    content: "\f07b";
+}
+
+.fa-lineheight:before {
+    content: "\f07d";
+}
+
+.fa-link:before {
+    content: "\f0c1";
+}
+
+.fa-cut:before {
+    content: "\f0c4";
+}
+
+.fa-copy:before {
+    content: "\f0c5";
+}
+
+.fa-pagebreak:before {
+    content: "\f0c7";
+}
+
+.fa-insertunorderedlist:before {
+    content: "\f0ca";
+}
+
+.fa-insertorderedlist:before {
+    content: "\f0cb";
+}
+
+.fa-strikethrough:before {
+    content: "\f0cc";
+}
+
+.fa-underline:before {
+    content: "\f0cd";
+}
+
+.fa-table:before {
+    content: "\f0ce";
+}
+
+.fa-undo:before {
+    content: "\f0e2";
+}
+
+.fa-paste:before {
+    content: "\f0ea";
+}
+
+.fa-template:before {
+    content: "\f0f6";
+}
+
+.fa-code:before {
+    content: "\f121";
+}
+
+.fa-unlink:before {
+    content: "\f127";
+}
+
+.fa-superscript:before {
+    content: "\f12b";
+}
+
+.fa-subscript:before {
+    content: "\f12c";
+}
+
+.fa-removeformat:before {
+    content: "\f12d";
+}
+
+.fa-source:before {
+    content: "\f13b";
+}
+
+.fa-anchor:before {
+    content: "\f13d";
+}
+
+.fa-video:before {
+    content: "\f16a";
+}
+
+.fa-file:before {
+    content: "\f15b";
+}
+
+.fa-plainpaste:before {
+    content: "\f15c";
+}
+
+.fa-wordpaste:before {
+    content: "\f1c2";
+}
+
+.fa-formatblock:before {
+    content: "\f1dc";
+}
+
+.fa-clearhtml:before {
+    content: "\f1fc";
+}
+
+.fa-selectall:before {
+    content: "\f245";
+}
+
+.fa-map:before {
+    content: "\f279";
+}
+
+.fa-fullscreen:before {
+    content: "\f0b2";
+}
+
+
+/*========================================================= icons for IE7 ====================================================================*/
+
+a [class^="fa-"],
+a [class*=" fa-"] {
+    cursor: pointer;
+}
+
+.fa-source {
+    *zoom: expression( this.runtimeStyle['zoom']='1', this.innerHTML='&#xf13b;');
+}
+
+.fa-preview {
+    *zoom: expression( this.runtimeStyle['zoom']='1', this.innerHTML='&#xf06e;');
+}
+
+.fa-clearhtml {
+    *zoom: expression( this.runtimeStyle['zoom']='1', this.innerHTML='&#xf1fc;');
+}
+
+.fa-quickformat {
+    *zoom: expression( this.runtimeStyle['zoom']='1', this.innerHTML='&#xf022;');
+}
+
+.fa-selectall {
+    *zoom: expression( this.runtimeStyle['zoom']='1', this.innerHTML='&#xf0a6;');
+}
+
+.fa-removeformat {
+    *zoom: expression( this.runtimeStyle['zoom']='1', this.innerHTML='&#xf12d;');
+}
+
+.fa-template {
+    *zoom: expression( this.runtimeStyle['zoom']='1', this.innerHTML='&#xf0f6;');
+}
+
+.fa-plainpaste {
+    *zoom: expression( this.runtimeStyle['zoom']='1', this.innerHTML='&#xf0f6;');
+}
+
+.fa-wordpaste {
+    *zoom: expression( this.runtimeStyle['zoom']='1', this.innerHTML='&#xf1c2;');
+}
+
+.fa-redo {
+    *zoom: expression( this.runtimeStyle['zoom']='1', this.innerHTML='&#xf01e;');
+}
+
+.fa-formatblock {
+    *zoom: expression( this.runtimeStyle['zoom']='1', this.innerHTML='&#xf1dc;');
+}
+
+.fa-fontname {
+    *zoom: expression( this.runtimeStyle['zoom']='1', this.innerHTML='&#xf031;');
+}
+
+.fa-fontsize {
+    *zoom: expression( this.runtimeStyle['zoom']='1', this.innerHTML='&#xf034;');
+}
+
+.fa-forecolor {
+    *zoom: expression( this.runtimeStyle['zoom']='1', this.innerHTML='&#xf031;');
+    color: #ff6600;
+}
+
+.fa-hilitecolor {
+    *zoom: expression( this.runtimeStyle['zoom']='1', this.innerHTML='&#xf031;');
+    background-color: #00ffff;
+}
+
+.fa-lineheight {
+    *zoom: expression( this.runtimeStyle['zoom']='1', this.innerHTML='&#xf07d;');
+}
+
+.fa-justifyleft {
+    *zoom: expression( this.runtimeStyle['zoom']='1', this.innerHTML='&#xf036;');
+}
+
+.fa-justifycenter {
+    *zoom: expression( this.runtimeStyle['zoom']='1', this.innerHTML='&#xf037;');
+}
+
+.fa-justifyright {
+    *zoom: expression( this.runtimeStyle['zoom']='1', this.innerHTML='&#xf038;');
+}
+
+.fa-justifyfull {
+    *zoom: expression( this.runtimeStyle['zoom']='1', this.innerHTML='&#xf039;');
+}
+
+.fa-insertorderedlist {
+    *zoom: expression( this.runtimeStyle['zoom']='1', this.innerHTML='&#xf0cb;');
+}
+
+.fa-insertunorderedlist {
+    *zoom: expression( this.runtimeStyle['zoom']='1', this.innerHTML='&#xf0ca;');
+}
+
+.fa-hr {
+    *zoom: expression( this.runtimeStyle['zoom']='1', this.innerHTML='&#xf068;');
+}
+
+.fa-pagebreak {
+    *zoom: expression( this.runtimeStyle['zoom']='1', this.innerHTML='&#xf0c7;');
+}
+
+.fa-anchor {
+    *zoom: expression( this.runtimeStyle['zoom']='1', this.innerHTML='&#xf13d;');
+}
+
+.fa-baidumap {
+    *zoom: expression( this.runtimeStyle['zoom']='1', this.innerHTML='&#xf041;');
+}
+
+.fa-audio {
+    *zoom: expression( this.runtimeStyle['zoom']='1', this.innerHTML='&#xf001;');
+}
+
+.fa-video {
+    *zoom: expression( this.runtimeStyle['zoom']='1', this.innerHTML='&#xf16a;');
+}
+
+.fa-media {
+    *zoom: expression( this.runtimeStyle['zoom']='1', this.innerHTML='&#xf03d;');
+}
+
+.fa-insertfile {
+    *zoom: expression( this.runtimeStyle['zoom']='1', this.innerHTML='&#xf07b;');
+}
+
+.fa-about {
+    *zoom: expression( this.runtimeStyle['zoom']='1', this.innerHTML='&#xf059;');
+}
+
+.fa-fullscreen {
+    *zoom: expression( this.runtimeStyle['zoom']='1', this.innerHTML='&#xf0b2;');
+}
+
+.fa-code {
+    *zoom: expression( this.runtimeStyle['zoom']='1', this.innerHTML='&#xf121;');
+}
+
+.fa-cut {
+    *zoom: expression( this.runtimeStyle['zoom']='1', this.innerHTML='&#xf0c4;');
+}
+
+.fa-copy {
+    *zoom: expression( this.runtimeStyle['zoom']='1', this.innerHTML='&#xf0c5;');
+}
+
+.fa-paste {
+    *zoom: expression( this.runtimeStyle['zoom']='1', this.innerHTML='&#xf0ea;');
+}
+
+.fa-undo {
+    *zoom: expression( this.runtimeStyle['zoom']='1', this.innerHTML='&#xf0e2;');
+}
+
+.fa-fontsize {
+    *zoom: expression( this.runtimeStyle['zoom']='1', this.innerHTML='&#xf034;');
+}
+
+.fa-bold {
+    *zoom: expression( this.runtimeStyle['zoom']='1', this.innerHTML='&#xf032;');
+}
+
+.fa-italic {
+    *zoom: expression( this.runtimeStyle['zoom']='1', this.innerHTML='&#xf033;');
+}
+
+.fa-underline {
+    *zoom: expression( this.runtimeStyle['zoom']='1', this.innerHTML='&#xf0cd;');
+}
+
+.fa-strikethrough {
+    *zoom: expression( this.runtimeStyle['zoom']='1', this.innerHTML='&#xf0cc;');
+}
+
+.fa-print {
+    *zoom: expression( this.runtimeStyle['zoom']='1', this.innerHTML='&#xf02f;');
+}
+
+.fa-outdent {
+    *zoom: expression( this.runtimeStyle['zoom']='1', this.innerHTML='&#xf03b;');
+}
+
+.fa-indent {
+    *zoom: expression( this.runtimeStyle['zoom']='1', this.innerHTML='&#xf03c;');
+}
+
+.fa-superscript {
+    *zoom: expression( this.runtimeStyle['zoom']='1', this.innerHTML='&#xf12b;');
+}
+
+.fa-subscript {
+    *zoom: expression( this.runtimeStyle['zoom']='1', this.innerHTML='&#xf12c;');
+}
+
+.fa-table {
+    *zoom: expression( this.runtimeStyle['zoom']='1', this.innerHTML='&#xf0ce;');
+}
+
+.fa-link {
+    *zoom: expression( this.runtimeStyle['zoom']='1', this.innerHTML='&#xf0c1;');
+}
+
+.fa-unlink {
+    *zoom: expression( this.runtimeStyle['zoom']='1', this.innerHTML='&#xf127;');
+}
+
+.fa-image {
+    *zoom: expression( this.runtimeStyle['zoom']='1', this.innerHTML='&#xf03e;');
+}
