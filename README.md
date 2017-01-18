@@ -30,3 +30,5 @@ Some rannalhi javascript website effect collections, some javascript、angularjs
 * [KindEditor-FontAwesome Rich Text Editor](https://silence940109.github.io/FrontJS/KindEditor-FontAwesome)
 
 * [highcharts](https://silence940109.github.io/FrontJS/highcharts)
+
+* [Image_ReduceAndRelarge](https://silence940109.github.io/FrontJS/Image_ReduceAndRelarge)
