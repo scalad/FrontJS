@@ -34,3 +34,5 @@ Some rannalhi javascript website effect collections, some javascript、angularjs
 * [Image_ReduceAndRelarge](https://silence940109.github.io/FrontJS/Image_ReduceAndRelarge)
 
 * [tearable-cloth](https://silence940109.github.io/FrontJS/tearable-cloth)
+
+* [progress_bar](https://silence940109.github.io/FrontJS/progress_bar)
