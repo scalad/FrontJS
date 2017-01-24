@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>HTML5 Canvas可撕裂布料效果</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" href="http://www.yyyweb.com/demo/common/init.css">
+    <style>
+    .top-banner {
+        background-color: #666;
+    }
+    a {
+        font-size: 13px;
+    }
+    #info {
+        position: absolute;
+        left: -1px;
+        top: 30px;
+    }
+    #c {
+        display: block;
+        margin: 60px auto 0;
+    }
+    </style>
+</head>
+
+<body>
+    <canvas id="c"></canvas>
+    <div id="info">
+        <p>
+            <br>- 使用鼠标可以拉扯
+            <br>
+            <br>- 右键可以切断布料
+            <br>
+            <br>
+        </p>
+    </div>
+    <script type="text/javascript">
+        document.getElementById('close').onmousedown = function(e) {
+            e.preventDefault();
+            document.getElementById('info').style.display = 'none';
+            return false;
+        };
+    </script>
+    <script type="text/javascript" src="Cloth.js"></script>
+    <div class="footer-banner" style="width:728px; margin:30px auto"></div>
+    <script src="http://www.yyyweb.com/demo/common/jquery.min.js"></script>
+    <script src="http://www.yyyweb.com/demo/common/init.js"></script>    
+</body>
+
+</html>
