@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <meta name="description" content="description of your site" />
+    <meta name="author" content="author of the site" />
+    <title>IndustryApp Template</title>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/bootstrap-responsive.css" />
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/toastr.css" />
+    <link rel="stylesheet" href="css/fullcalendar.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/jquery.knob.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="js/jquery.sparkline.min.js"></script>
+    <script src="js/toastr.js"></script>
+    <script src="js/jquery.tablesorter.min.js"></script>
+    <script src="js/jquery.peity.min.js"></script>
+    <script src="js/fullcalendar.min.js"></script>
+    <script src="js/gcal.js"></script>
+    <script src="js/setup.js"></script>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+  <body>
+    <div id="in-nav">
+      <div class="container">
+        <div class="row">
+          <div class="span12">
+            <ul class="pull-right">
+              <li><a href="#">Link1</a></li>
+              <li><a href="#">Link2</a></li>
+              <li><a href="#">Link3</a></li>
+              <li><a href="login.html">Login</a></li>
+            </ul><a id="logo" href="index.html">
+              <h4>My<strong>Admin</strong></h4></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="in-sub-nav">
+      <div class="container">
+        <div class="row">
+          <div class="span12">
+            <ul>
+              <li><a href="index.html"><i class="batch home"></i><br />Dashboard</a></li>
+              <li><span class="label label-important pull-right">08</span><a href="stream.html" class="active"><i class="batch stream"></i><br />Stream</a></li>
+              <li><span class="label label-important pull-right">04</span><a href="messages.html"><i class="batch plane"></i><br />Messages</a></li>
+              <li><a href="calendar.html"><i class="batch calendar"></i><br />Calendar</a></li>
+              <li><a href="paragraphs.html"><i class="batch quill"></i><br />Paragraphs</a></li>
+              <li><a href="faq.html"><i class="batch forms"></i><br />FAQ</a></li>
+              <li><a href="users.html"><i class="batch users"></i><br />Users</a></li>
+              <li><a href="settings.html"><i class="batch settings"></i><br />Settings</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page">
+      <div class="page-container">
+<div class="container">
+  <div class="row">
+    <div class="span3">
+      <h4 class="header">Filters</h4>
+      <div class="filters"><span class="pull-right">4</span>
+        <input type="checkbox" id="cb3" checked="checked" />
+        <label for="cb3">Emailer</label><span class="pull-right">7</span>
+        <input type="checkbox" id="cb4" checked="checked" />
+        <label for="cb4">Admins</label>
+        <h5>System</h5><span class="pull-right">302</span>
+        <input type="checkbox" id="logs" />
+        <label for="logs">System Logs</label><span class="pull-right">18</span>
+        <input type="checkbox" id="system" checked="checked" />
+        <label for="system">System Up</label><span class="pull-right">21</span>
+        <input type="checkbox" id="cb2" checked="checked" />
+        <label for="cb2">System Down</label><span class="pull-right">51</span>
+        <input type="checkbox" id="cb8" checked="checked" />
+        <label for="cb8">System Warning</label><span class="pull-right">2</span>
+        <input type="checkbox" id="cb9" checked="checked" />
+        <label for="cb9">Slow Status</label>
+        <h5>People</h5><span class="pull-right">5</span>
+        <input type="checkbox" id="cb5" checked="checked" />
+        <label for="cb5">Nathan Speller</label><span class="pull-right">14</span>
+        <input type="checkbox" id="cb6" checked="checked" />
+        <label for="cb6">Jane Eyre</label><span class="pull-right">2</span>
+        <input type="checkbox" id="cb7" />
+        <label for="cb7">Tony Syrup</label>
+      </div>
+    </div>
+    <div class="span9">
+      <div class="btn-group pull-right">
+        <button class="btn"> <i class="icon-refresh"></i></button>
+        <button data-toggle="dropdown" class="btn dropdown-toggle"><span class="caret"></span></button>
+        <ul class="dropdown-menu">
+          <li><a href="#">Turn Live Update On</a></li>
+          <li><a href="#">Turn Live Update Off</a></li>
+          <li><a href="#">Disable</a></li>
+        </ul>
+      </div>
+      <h4 class="header">Stream</h4>
+      <div class="stream">
+        <div class="item"><img src="img/nate.png" class="avatar" />
+          <p class="date">Just Now</p>
+          <h4>Nathan Speller</h4>
+          <div class="row">
+            <p class="span6">
+              Pushed to repo "new edits for the nav bar". This is a much 
+              longer description to show when this paragraph will end. A fixed 
+              width for easy readability.
+            </p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="stream-icon stream-success"><i class="icon-off icon-white"></i></div>
+          <p class="date">25 May 2012</p>
+          <h4>System</h4>
+          <p>Server Status returned to "Up"</p>
+        </div>
+        <div class="item">
+          <div class="stream-icon stream-danger"><i class="icon-off icon-white"></i></div>
+          <p class="date">24 May 2012</p>
+          <h4>System</h4>
+          <p>Server down. Error 314 "undefined function inspect"</p>
+        </div>
+        <div class="item"><img src="img/jane.png" class="avatar" />
+          <p class="date">24 May 2012</p>
+          <h4>Jane Eyre</h4>
+          <div class="row">
+            <p class="span6">
+              Going to need to take down the server to do some maintainence on the db. 
+              It has been going down regularly and there has been some data loss for 
+              less than 3% of our customers.
+            </p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="stream-icon stream-warning"><i class="icon-warning-sign icon-white"></i></div>
+          <p class="date">24 May 2012</p>
+          <h4>System</h4>
+          <p>Server down. Error 314 "undefined function inspect"</p>
+        </div>
+        <div class="item">
+          <div class="stream-icon stream-info"><i class="icon-envelope icon-white"></i></div>
+          <p class="date">23 May 2012</p>
+          <h4>Emailer</h4>
+          <p>Newsletter cron job completed in 42m</p>
+        </div>
+        <div class="item">
+          <div class="stream-icon stream-success"><i class="icon-off icon-white"></i></div>
+          <p class="date">21 May 2012</p>
+          <h4>System</h4>
+          <p>Server Status returned to "Up"</p>
+        </div>
+        <div class="item">
+          <div class="stream-icon stream-danger"><i class="icon-off icon-white"></i></div>
+          <p class="date">21 May 2012</p>
+          <h4>System</h4>
+          <p>Server down. Error 314 "undefined function inspect"</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><script type="text/javascript">
+(function() {
+  var delay;
+
+  $($(".item")[0]).hide();
+
+  delay = function(ms, func) {
+    return setTimeout(func, ms);
+  };
+
+  delay(500, function() {
+    return $($(".item")[0]).slideDown("slow");
+  });
+
+}).call(this);
+</script>
+      </div>
+    </div>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="span12">
+            <p class="pull-right">Admin Theme by Nathan Speller</p>
+            <p>&copy; Copyright 2013 FreelanceLeague</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="js/d3-setup.js"></script><script>protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://'; address = protocol + window.location.host + window.location.pathname + '/ws'; socket = new WebSocket(address);
+socket.onmessage = function(msg) { msg.data == 'reload' && window.location.reload() }</script>
+</html>

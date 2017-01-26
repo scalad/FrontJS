@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <meta name="description" content="description of your site" />
+    <meta name="author" content="author of the site" />
+    <title>IndustryApp Template</title>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/bootstrap-responsive.css" />
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/toastr.css" />
+    <link rel="stylesheet" href="css/fullcalendar.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/jquery.knob.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="js/jquery.sparkline.min.js"></script>
+    <script src="js/toastr.js"></script>
+    <script src="js/jquery.tablesorter.min.js"></script>
+    <script src="js/jquery.peity.min.js"></script>
+    <script src="js/fullcalendar.min.js"></script>
+    <script src="js/gcal.js"></script>
+    <script src="js/setup.js"></script>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+  <body>
+    <div id="in-nav">
+      <div class="container">
+        <div class="row">
+          <div class="span12">
+            <ul class="pull-right">
+              <li><a href="#">Link1</a></li>
+              <li><a href="#">Link2</a></li>
+              <li><a href="#">Link3</a></li>
+              <li><a href="login.html">Login</a></li>
+            </ul><a id="logo" href="index.html">
+              <h4>My<strong>Admin</strong></h4></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="in-sub-nav">
+      <div class="container">
+        <div class="row">
+          <div class="span12">
+            <ul>
+              <li><a href="index.html"><i class="batch home"></i><br />Dashboard</a></li>
+              <li><span class="label label-important pull-right">08</span><a href="stream.html"><i class="batch stream"></i><br />Stream</a></li>
+              <li><span class="label label-important pull-right">04</span><a href="messages.html"><i class="batch plane"></i><br />Messages</a></li>
+              <li><a href="calendar.html"><i class="batch calendar"></i><br />Calendar</a></li>
+              <li><a href="paragraphs.html"><i class="batch quill"></i><br />Paragraphs</a></li>
+              <li><a href="faq.html"><i class="batch forms"></i><br />FAQ</a></li>
+              <li><a href="users.html" class="active"><i class="batch users"></i><br />Users</a></li>
+              <li><a href="settings.html"><i class="batch settings"></i><br />Settings</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page">
+      <div class="page-container">
+<div class="container">
+  <div class="row">
+    <div class="span12"><a href="#newUserModal" data-toggle="modal" class="btn pull-right">New User</a>
+      <h4 class="header">Users</h4>
+      <table class="table table-striped sortable">
+        <thead>
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Username</th>
+            <th>Status</th>
+            <th>Date Joined</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>John</td>
+            <td>Smith</td>
+            <td>jsmith@yahoo.com</td>
+            <td>jsmith</td>
+            <td><span class="label label-success">Active</span></td>
+            <td>2012-04-14</td>
+            <td>
+              <div class="btn-group">
+                <button class="btn">Approve</button>
+                <button data-toggle="dropdown" class="btn dropdown-toggle"><span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Edit Username</a><a href="#">Disable Account</a><a href="#">Destroy</a></li>
+                </ul>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Susan</td>
+            <td>Mestas</td>
+            <td>sm1268@gmail.com</td>
+            <td>maestromestas</td>
+            <td><span class="label">Inactive</span></td>
+            <td>2012-01-02</td>
+            <td>
+              <div class="btn-group">
+                <button class="btn">Approve</button>
+                <button data-toggle="dropdown" class="btn dropdown-toggle"><span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Edit Username</a><a href="#">Disable Account</a><a href="#">Destroy</a></li>
+                </ul>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Robert</td>
+            <td>Jetton</td>
+            <td>robbyjet@gmail.com</td>
+            <td>jetsetrob</td>
+            <td><span class="label label-inverse">Admin</span></td>
+            <td>2011-11-12</td>
+            <td>
+              <div class="btn-group">
+                <button class="btn">Approve</button>
+                <button data-toggle="dropdown" class="btn dropdown-toggle"><span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Edit Username</a><a href="#">Disable Account</a><a href="#">Destroy</a></li>
+                </ul>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Kristen</td>
+            <td>Heck</td>
+            <td>kheck12@aol.com</td>
+            <td>heckofathrow</td>
+            <td><span class="label label-important">Banned</span></td>
+            <td>2012-05-11</td>
+            <td>
+              <div class="btn-group">
+                <button class="btn">Approve</button>
+                <button data-toggle="dropdown" class="btn dropdown-toggle"><span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Edit Username</a><a href="#">Disable Account</a><a href="#">Destroy</a></li>
+                </ul>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Steve</td>
+            <td>McMullan</td>
+            <td>steveymac@yahoo.com</td>
+            <td>orangeego</td>
+            <td><span class="label label-inverse">Admin</span></td>
+            <td>2010-07-11</td>
+            <td>
+              <div class="btn-group">
+                <button class="btn">Approve</button>
+                <button data-toggle="dropdown" class="btn dropdown-toggle"><span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Edit Username</a><a href="#">Disable Account</a><a href="#">Destroy</a></li>
+                </ul>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Nicole</td>
+            <td>Brown</td>
+            <td>nikkybrown@aol.com</td>
+            <td>nicolebrown</td>
+            <td><span class="label label-success">Active</span></td>
+            <td>2012-12-04</td>
+            <td>
+              <div class="btn-group">
+                <button class="btn">Approve</button>
+                <button data-toggle="dropdown" class="btn dropdown-toggle"><span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Edit Username</a><a href="#">Disable Account</a><a href="#">Destroy</a></li>
+                </ul>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Lynn</td>
+            <td>West</td>
+            <td>lynnawest@dayrep.com</td>
+            <td>westlynn</td>
+            <td><span class="label label-success">Active</span></td>
+            <td>2011-03-11</td>
+            <td>
+              <div class="btn-group">
+                <button class="btn">Approve</button>
+                <button data-toggle="dropdown" class="btn dropdown-toggle"><span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Edit Username</a><a href="#">Disable Account</a><a href="#">Destroy</a></li>
+                </ul>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Debbie</td>
+            <td>Fava</td>
+            <td>dfava69@teleworm.us</td>
+            <td>favadebs</td>
+            <td><span class="label">Inactive</span></td>
+            <td>2012-11-02</td>
+            <td>
+              <div class="btn-group">
+                <button class="btn">Approve</button>
+                <button data-toggle="dropdown" class="btn dropdown-toggle"><span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Edit Username</a><a href="#">Disable Account</a><a href="#">Destroy</a></li>
+                </ul>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Abby</td>
+            <td>Zedler</td>
+            <td>azed12@school.edu</td>
+            <td>azeds</td>
+            <td><span class="label">Inactive</span></td>
+            <td>2010-11-02</td>
+            <td>
+              <div class="btn-group">
+                <button class="btn">Approve</button>
+                <button data-toggle="dropdown" class="btn dropdown-toggle"><span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Edit Username</a><a href="#">Disable Account</a><a href="#">Destroy</a></li>
+                </ul>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="pagination pagination-centered">
+        <ul>
+          <li class="disabled"><a href="#">&laquo;</a></li>
+          <li class="active"><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li><a href="#">&raquo;</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="newUserModal" class="modal hide fade">
+  <div class="modal-header">
+    <button type="button" data-dismiss="modal" aria-hidden="true" class="close">&times;</button>
+    <h3>New User</h3>
+  </div>
+  <div class="modal-body">
+    <form class="form-horizontal" />
+      <div class="control-group">
+        <label for="inputEmail" class="control-label">Email </label>
+        <div class="controls">
+          <input id="inputEmail" type="text" placeholder="Email" />
+        </div>
+      </div>
+      <div class="control-group">
+        <label for="inputCurrentPassword" class="control-label">Username </label>
+        <div class="controls">
+          <input id="inputCurrentPassword" type="password" placeholder="Username" />
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer"><a href="#" data-dismiss="modal" class="btn">Close</a><a href="#" data-dismiss="modal" class="btn btn-primary">Save Changes</a></div>
+</div>
+      </div>
+    </div>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="span12">
+            <p class="pull-right">Admin Theme by Nathan Speller</p>
+            <p>&copy; Copyright 2013 FreelanceLeague</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="js/d3-setup.js"></script><script>protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://'; address = protocol + window.location.host + window.location.pathname + '/ws'; socket = new WebSocket(address);
+socket.onmessage = function(msg) { msg.data == 'reload' && window.location.reload() }</script>
+</html>
