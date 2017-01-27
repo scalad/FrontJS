@@ -1,7 +1,7 @@
-## Rannalhi Javascript FrontJS
+## 炫酷的前端模板
 
 <h3>
-Some rannalhi javascript website effect collections, some javascript、angularjs、jQuery、HTML5 rannalhi website.
+炫酷的前端模板，javascript、angularjs、jQuery、HTML5
 </h3>
 </br>
 
