@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>UI效果设计的非常棒的软键盘效果</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- 代码部分begin -->
+<ul class="lanren">
+    <input type="text" placeholder="手机号码后四位" id="numkeyboard1" class="numkeyboard" /></li>
+    <input type="text"  placeholder="开箱密码"  id="numkeyboard2"  class="numkeyboard"/></li>
+    <button type="submit" value="querun">确  认</button>        
+</ul>
+<script src="js/jquery.min.js"></script>
+<script src="js/ioskeyboard.js"></script>
+<script>
+$(function(){
+    $(".numkeyboard").ioskeyboard({
+        keyboardRadix:80,//键盘大小基数，实际大小比为9.4，即设置为100时实际大小为940X330
+        keyboardRadixMin:40,//键盘大小的最小值，默认为60，实际大小为564X198
+        keyboardRadixChange:true,//是否允许用户改变键盘大小,该功能仅能完美支持Chrome26；仅当keyboardRadixMin不小于60时才较好支持Safari内核浏览器
+        clickeve:true,//是否绑定元素click事件
+        colorchange:true,//是否开启按键记忆功能，如果开启，将随着按键次数的增加加深相应按键的背景颜色
+        colorchangeStep:1,//按键背景颜色改变步伐，采用RBG值，默认为RGB(255,255,255),没按一次三个数字都减去步伐值
+        colorchangeMin:154//按键背影颜色的最小值，默认为RGB(154,154,154)
+    });
+});
+</script>
+<!-- 代码部分end -->
+
+</body>
+</html>

@@ -50,3 +50,5 @@
 * [matrix-admin05](https://silence940109.github.io/FrontJS/matrix-admin05)
 
 * [jquery环形3D立体旋转特效](https://silence940109.github.io/FrontJS/jquery环形3D立体旋转特效)
+
+* [UI效果设计的非常棒的软键盘效果](https://silence940109.github.io/FrontJS/UI效果设计的非常棒的软键盘效果)
