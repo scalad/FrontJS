@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jquery环形3D立体旋转特效</title>
+<link href="css/lanrenzhijia.css" rel="stylesheet" />
+</head>
+<body>
+<h1></h1>
+<ul>
+  <li class="monolith"><span>Other Things</span></li>
+  <li class="mover"><span>Thing</span></li>
+  <li class="mover"><span>Thing</span></li>
+  <li class="mover"><span>Thing</span></li>
+  <li class="mover"><span>Thing</span></li>
+  <li class="mover"><span>Thing</span></li>
+  <li class="mover"><span>Thing</span></li>
+  <li class="mover"><span>Thing</span></li>
+  <li class="mover"><span>Thing</span></li>
+  <li class="mover"><span>Thing</span></li>
+  <li class="mover"><span>Thing</span></li>
+  <li class="mover"><span>Thing</span></li>
+  <li class="mover"><span>Thing</span></li>
+  <li class="mover"><span>Thing</span></li>
+  <li class="mover"><span>Thing</span></li>
+  <li class="mover"><span>Thing</span></li>
+</ul>
+<script src="js/jquery.js"></script>
+<script src="js/lanrenzhijia.js"></script>
+<script>
+$(document).ready(function() {
+				$('ul').roundabout({
+					minZ: 100,
+					maxZ: 300,
+					minOpacity: 1,
+					minScale: 0.6,
+					childSelector: '.mover',
+					tilt: -4
+				});
+});
+</script>
+</body>
+</html>

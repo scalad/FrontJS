@@ -1,0 +1,104 @@
+/* 代码整理：懒人之家 www.lanrenzhijia.com */
+* {
+	margin:0;
+	padding:0;
+}
+html {
+	padding: 0;
+	margin: 0;
+}
+body {
+	font-family: Palatino, Georgia, "Times New Roman", serif;
+	padding: 0;
+	margin: 0;
+	font-size: 1em;
+}
+h1 {
+	font-size: 4em;
+	letter-spacing: -1px;
+	margin: 1em 0 0.5em;
+	text-align: center;
+}
+.interact {
+	border-top: 1px solid #ccc;
+	margin-top: 3em;
+	margin-bottom: 4em;
+	padding-top: 1.5em;
+	text-align: center;
+}
+.interact a {
+	background-color: #2179b6;
+	border-bottom: 1px solid #084d7d;
+	color: #eee;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Helvetica Neue", Arial, sans-serif;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	-ms-border-radius: 8px;
+	-o-border-radius: 8px;
+	border-radius: 8px;
+	text-decoration: none;
+	padding: 8px 14px;
+	margin: 0 1em;
+}
+.interact p {
+	font-style: italic;
+	color: #666;
+}
+.return {
+	font-size: 1.5em;
+	text-align: center;
+}
+.return a {
+	color: #2179b6;
+	text-decoration: none;
+}
+.return a:hover {
+	text-decoration: underline;
+}
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0 auto;
+	width: 36em;
+	height: 26em;
+}
+li {
+	height: 8em;
+	width: 8em;
+	background-color: #fff;
+	text-align: center;
+	cursor: pointer;
+	border: 1px solid #bbb;
+	-webkit-border-radius: 4em;
+	-moz-border-radius: 4em;
+	-ms-border-radius: 4em;
+	-o-border-radius: 4em;
+	border-radius: 4em;
+}
+li.roundabout-in-focus {
+	cursor: default;
+}
+li span {
+	display: block;
+	padding-top: 3.5em;
+}
+.monolith {
+	background-color: #222;
+	color: #fff;
+	text-align: center;
+	width: 300px;
+	height: 400px;
+	position: absolute;
+	z-index: 260;
+	left: 135px;
+	border-color: #222;
+	opacity: 0.92;
+}
+#carbonads-container {
+	clear: both;
+	margin-top: 1em;
+}
+#carbonads-container .carbonad {
+	margin: 0 auto;
+}
+/* 代码整理：懒人之家 www.lanrenzhijia.com */
