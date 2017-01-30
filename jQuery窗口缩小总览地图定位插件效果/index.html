@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQuery窗口缩小总览地图定位插件效果--minimap.js</title>
+<style>
+.minimap {z-index : 10000;position : fixed;cursor: pointer;}
+.miniregion { z-index : 10001; position : fixed;background : transparent; border: 2px solid silver; border-radius: 10%; cursor: pointer;}
+.miniregion:hover { box-shadow: 0 0 0.4em darkgrey;}
+.noselect { -webkit-touch-callout: none; -webkit-user-select: none;-khtml-user-select: none; -moz-user-select: none;-ms-user-select: none; user-select: none;}
+</style>
+</head>
+<body>
+
+<!--代码部分begin-->
+<p>minimap - A jQuery Plugin<br>
+  A preview of full webpage or its DOM element with flexible positioning and navigation support</p>
+<p>Demo Page</p>
+<p>Getting Started</p>
+<p>Download the latest code</p>
+<p>Fork this repository or download js/css files from dist directory.</p>
+<p>Including it on your page</p>
+<p><img src="http://demo.lanrenzhijia.com/2015/minimap0312/images/123szf.jpg"  alt=""/></p>
+<p><img src="http://demo.lanrenzhijia.com/2015/minimap0312/images/asd123.jpg"  alt=""/></p>
+<p>&lt;link rel=&quot;stylesheet&quot; href=&quot;minimap.min.css&quot; /&gt;<br>
+  &lt;script src=&quot;jquery.js&quot;&gt;&lt;/script&gt;<br>
+  &lt;script src=&quot;minimap.min.js&quot;&gt;&lt;/script&gt;<br>
+  Basic Usage</p>
+<p>//Desired dom element<br>
+  var previewBody = $('body').minimap();<br>
+  Properties</p>
+<p>heightRatio</p>
+<p>height ratio of the view port. ratio can be in the range [0.0, 1.0). (default: 0.6)<br>
+  widthRatio</p>
+<p>width ratio of the view port. ratio can be in the range [0.0, 0.5). (default: 0.05)<br>
+  offsetHeightRatio</p>
+<p>Margin top ratio of the view port. ratio can be in the range (0.0, 0.9]. (default: 0.035)<br>
+  offsetWidthRatio</p>
+<p>Margin left or right(based on position property) ratio of the view port. ratio can be in the range (0.0, 0.9]. (default: 0.035)<br>
+  position</p>
+<p>position of the minimap. Supported positions are:<br>
+  'right' (default)<br>
+  'left'<br>
+  touch</p>
+<p>touch support. (default: true)<br>
+  smoothScroll</p>
+<p>linear animation support for scrolling. (dafault: true)<br>
+  smoothScrollDelay</p>
+<p>Smooth scroll delay in milliseconds. (default: 200ms)<br>
+  Setters</p>
+<p>function setPosition(position)</p>
+<p>Set position property. position can be either 'left' or 'right'<br>
+  function setHeightRatio(ratio)</p>
+<p>Set heightRatio property.<br>
+  function setWidthRatio(ratio)</p>
+<p>Set widthRatio property.<br>
+  function setOffsetHeightRatio(ratio)</p>
+<p>Set offsetHeightRatio property.<br>
+  function setOffsetWidthRatio(ratio)</p>
+<p>Set offsetWidthRatio property.<br>
+  function setSmoothScroll(smooth)</p>
+<p>Set smoothScroll property<br>
+  function setSmoothScrollDelay(duration)</p>
+<p>Set setSmoothScrollDelay property.<br>
+  Callback</p>
+<p>function onPreviewChange()</p>
+<p>onPreviewChange callback will be triggered for the below cases:<br>
+  View port is resized.<br>
+  Calling setter functions.<br>
+  Other functions</p>
+<p>function show()</p>
+<p>Show preview<br>
+  function hide()</p>
+<p>Hide preview<br>
+  function toggle()</p>
+<p>Toggle Preview<br>
+  Default Settings</p>
+<p>Mini-map with default values</p>
+<p>var previewBody = $('body').minimap(<br>
+  heightRatio : 0.6,<br>
+  widthRatio : 0.05,<br>
+  offsetHeightRatio : 0.035,<br>
+  offsetWidthRatio : 0.035,<br>
+  position : &quot;right&quot;,<br>
+  touch: true,<br>
+  smoothScroll: true,<br>
+  smoothScrollDelay: 200,<br>
+  onPreviewChange: function() {}<br>
+  });<br>
+  CSS classes</p>
+<p>Use the below css classes for customization</p>
+<p>.minimap - Mini-map area</p>
+<p>.miniregion - Mini-map view area<br>
+  Caveats</p>
+<p>Browser's find gives result in both the page &amp; its preview<br>
+  Async updates to the dom elements after minimap was created may not reflect in the preview.</p>
+<script src="http://www.lanrenzhijia.com/ajaxjs/1.11.1/jquery-1.11.1.min.js"></script>
+<script src="js/minimap.js"></script>
+<script>
+$(function(){
+	var previewBody = $('body').minimap({
+		heightRatio : 0.6,
+		widthRatio : 0.1,
+		offsetHeightRatio : 0.035,
+		offsetWidthRatio : 0.065,
+		position : "right",
+		touch: true,
+		smoothScroll: true,
+		smoothScrollDelay: 200,
+		onPreviewChange: function() {}
+	});
+});
+</script>
+<!--代码部分end-->
+
+</body>
+</html>
