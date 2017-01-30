@@ -56,3 +56,5 @@
 * [简单有效的jquery瀑布流效果](https://scalad.github.io/FrontJS/简单有效的jquery瀑布流效果)
 
 * [多个H5版本jquery评分列表](https://scalad.github.io/FrontJS/多个H5版本jquery评分列表)
+
+* [图片悬停精美动画效果HoverEx插件](https://scalad.github.io/FrontJS/图片悬停精美动画效果HoverEx插件)
