@@ -54,3 +54,5 @@
 * [UI效果设计的非常棒的软键盘效果](https://scalad.github.io/FrontJS/UI效果设计的非常棒的软键盘效果)
 
 * [简单有效的jquery瀑布流效果](https://scalad.github.io/FrontJS/简单有效的jquery瀑布流效果)
+
+* [多个H5版本jquery评分列表](https://scalad.github.io/FrontJS/多个H5版本jquery评分列表)
