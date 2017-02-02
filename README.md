@@ -62,3 +62,5 @@
 * [jQuery窗口缩小总览地图定位插件效果](https://scalad.github.io/FrontJS/jQuery窗口缩小总览地图定位插件效果)
 
 * [jquery点击弹出可分享的按钮效果](https://scalad.github.io/FrontJS/jquery点击弹出可分享的按钮效果)
+
+* [jquery模拟IOS弹出提示效果](https://scalad.github.io/FrontJS/jquery模拟IOS弹出提示效果)
