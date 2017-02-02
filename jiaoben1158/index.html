@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>大前端jQuery弹出层效果 - 站长素材</title>
+<link rel="stylesheet" href="css/theme.css" media="all">
+<script src="js/jquery.min.js"></script>
+<script>
+jQuery(document).ready(function($) {
+	$('.theme-login').click(function(){
+		$('.theme-popover-mask').fadeIn(100);
+		$('.theme-popover').slideDown(200);
+	})
+	$('.theme-poptit .close').click(function(){
+		$('.theme-popover-mask').fadeOut(100);
+		$('.theme-popover').slideUp(200);
+	})
+
+})
+</script>
+</head>
+<body>
+<div class="theme-buy">
+<a class="btn btn-primary btn-large theme-login" href="javascript:;">点我查看效果</a>
+</div>
+<div class="theme-popover">
+     <div class="theme-poptit">
+          <a href="javascript:;" title="关闭" class="close">×</a>
+          <h3>登录 是一种态度</h3>
+     </div>
+     <div class="theme-popbod dform">
+           <form class="theme-signin" name="loginform" action="" method="post">
+                <ol>
+                     <li><h4>你必须先登录！</h4></li>
+                     <li><strong>用户名：</strong><input class="ipt" type="text" name="log" value="sc.chinaz.com" size="20" /></li>
+                     <li><strong>密码：</strong><input class="ipt" type="password" name="pwd" value="***" size="20" /></li>
+                     <li><input class="btn btn-primary" type="submit" name="submit" value=" 登 录 " /></li>
+                </ol>
+           </form>
+     </div>
+</div>
+<div class="theme-popover-mask"></div>
+<div style="text-align:center;clear:both"><br><br><br><br><br><br><br><br><br>
+<p>适用浏览器：IE8、360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗. </p><br>
+<p>来源：<a href="http://www.97zzw.com/" target="_blank">97站长网</a></p>
+</div>
+</body>
+</html>
