@@ -66,3 +66,5 @@
 * [jquery点击弹出可分享的按钮效果](https://scalad.github.io/FrontJS/jquery点击弹出可分享的按钮效果)
 
 * [jquery模拟IOS弹出提示效果](https://scalad.github.io/FrontJS/jquery模拟IOS弹出提示效果)
+
+* [jQuery支持图片放大缩小查看效果](https://scalad.github.io/FrontJS/jQuery支持图片放大缩小查看效果)
