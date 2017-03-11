@@ -21,6 +21,8 @@
 
 * [jQuery_Dialog](https://scalad.github.io/FrontJS/jQuery_Dialog)
 
+* [jQuery_Dialog_Show](https://scalad.github.io/FrontJS/jQuery_Dialog_Show)
+
 * [jQuery_Smartbox](https://scalad.github.io/FrontJS/jQuery_Smartbox)
 
 * [JavaScript_Load_Image](https://scalad.github.io/FrontJS/JavaScript_Load_Image)
