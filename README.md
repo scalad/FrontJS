@@ -74,3 +74,5 @@
 * [jQuery支持图片放大缩小查看效果](https://scalad.github.io/FrontJS/jQuery支持图片放大缩小查看效果)
 
 * [jquery弹出层效果](https://scalad.github.io/FrontJS/jquery弹出层效果)
+
+* [jquery在线模拟linux系统桌面效果](https://scalad.github.io/FrontJS/jquery在线模拟linux系统桌面效果)
