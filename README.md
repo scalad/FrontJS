@@ -77,4 +77,4 @@
 
 * [jquery在线模拟linux系统桌面效果](https://scalad.github.io/FrontJS/jquery在线模拟linux系统桌面效果)
 
-* [layui.layim-v3.0.1_实时通讯在线聊天系统](https://scalad.github.io/FrontJS/layui.layim-v3.0.1_实时通讯在线聊天系统)
+* [layui.layim_v3.0.1_实时通讯在线聊天系统](https://scalad.github.io/FrontJS/layui.layim_v3.0.1_实时通讯在线聊天系统)
