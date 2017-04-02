@@ -1,0 +1,63 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+	</head>
+	<body align=center>
+		<button>Click Me</button>
+	</body>
+</html>
+<script type="text/javascript">
+window.addEventListener("load", function(){
+    if(Notification && Notification.permission !== "granted"){
+        Notification.requestPermission(function(status){
+            if(Notification.permission !== status){
+                Notification.permission = status;
+            }
+        });
+    }
+    var button = document.getElementsByTagName("button")[0];
+    button.addEventListener("click", function(){
+        var t = new Date().toLocaleString();
+        var options={
+            dir: "ltr",
+            lang: "utf-8",
+            icon: "https://avatars3.githubusercontent.com/u/16514952?v=3&s=460",
+            body: "你好呀，欢迎留言交流呀"
+        };
+        if(Notification && Notification.permission === "granted"){
+            var n = new Notification("HUSTecho: "+ t, options);    
+            n.onshow = function(){
+                console.log("You got me!");
+            };
+            n.onclick = function() {
+                alert("You clicked me!");
+                window.location = "https://github.com/scalad";
+            };
+            n.onclose = function(){
+                console.log("notification closed!");
+            };        
+            n.onerror = function() {
+                console.log("An error accured");
+            }            
+        }else if(Notification && Notification.permission !== "denied") {
+            Notification.requestPermission(function(status){
+                if(Notification.permission !== status){
+                    Notification.permission = status;
+                }
+
+                if(status === "granted"){
+                    for(var i = 0; i < 3; i++){
+                        var n = new Notification("Hi! " + i, {
+                            tag: "Beyoung",
+                            icon: "https://avatars3.githubusercontent.com/u/16514952?v=3&s=460",
+                            body: "你好呀，我是第" + i +"条消息啦！"
+                        });
+                    }
+                }
+            });
+        }else{
+            alert("Hi!");
+        }
+    });
+});
+</script>
