@@ -82,3 +82,5 @@
 * [Web_Notification系统提示](https://scalad.github.io/FrontJS/Web_Notification/index.html)
 
 * [HTML5_CSS3_Login](https://scalad.github.io/FrontJS/HTML5_CSS3_Login/login.html)
+
+* [login-register-form前端登陆模板](https://scalad.github.io/FrontJS/login-register-form/index.html)
